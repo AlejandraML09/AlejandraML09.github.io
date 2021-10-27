@@ -1,3 +1,5 @@
+@import "../themes/theme";
+
 /************************
             HEADER
 ***************************/
@@ -25,28 +27,40 @@
 /*****************************************
      BARRA DE NAVEGACIÓN (NAV-BAR) -> Tiene adentro los UL's que es la LISTA de navegación de la Nav-bar.
 ******************************************/
-
+/* Contiene toda la lista entera -> Contiene el NAV */
 .nav-bar {
-    background-color: cadetblue;
+    background-color: $languid-lavender;
+    position: sticky;
+    top: 0;
 }
 
+/* Contiene el ul */
 .nav-bar__nav-list {
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    justify-content: space-around;
 }
 
+/* Esto es el li */
 .nav-bar__nav-item {
     text-align: center;
-    background-color: aquamarine;
+    box-sizing: content-box;
+    border: 5px solid transparent;
 }
 
+/* Link de cada uno */
 .nav-bar__nav-link {
     display: block;
-    background-color: darkslateblue;
+    background-color: $languid-lavender;
     color: black;
-    padding: 1em 2em;
+    padding: 0.7em 2em;
     text-decoration: none;
+}
+
+/* Hover para la línea de abajo */
+.nav-bar__nav-list li:hover {
+    border-bottom: 5px solid $old-lavender;
+    transition: all ease 0.3s;
 }
 
 /************************
@@ -55,7 +69,7 @@
 
 .search-bar {
     display: flex;
-    background-color: beige;
+    background-color: $old-lavender;
     justify-content: space-between;
 }
 
@@ -64,28 +78,61 @@
     padding: 1em;
 }
 
+/* LOGO */
 .search-bar__logo-container {
-    background-color: slategrey;
+    background-color: $pink-lavender;
+}
+.search-bar__logo-makeup {
+    width: 40px;
 }
 
+/* Contenedor de la Barra de búsqueda */
 .search-bar__form-container {
-    background-color: salmon;
+    background-color: $pink-lavender;
     flex-basis: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
+/* El "Buscar" */
 .search-bar__form-label {
-    background-color: sandybrown;
+    background-color: $pink-lavender;
+    margin-right: 0.5em;
 }
 
+/* El form para buscar -> Input */
 .search-bar__form-search {
-    width: 70%;
-    background-color: rosybrown;
+    width: 20%;
+    background-color: $platinum;
+    border-bottom: 1px solid $old-lavender;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        font-family: "Montserrat", sans-serif;
+        color: $old-lavender;
+    }
 }
 
+/* Botón de buscar con el Magnifying glass */
 .search-bar__form-submit {
-    background-color: plum;
+    margin-left: 0.5em;
+
+    &:visited {
+        color: $old-lavender;
+    }
+}
+
+/* Icono para buscar directamente */
+.fa-search {
+    margin-left: 0.5em;
+    margin: auto;
 }
 
 .search-bar__carrito-container {

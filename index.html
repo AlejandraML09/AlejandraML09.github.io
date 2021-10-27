@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Inicio</title>
         <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/card.css" />
+        <script
+            src="https://kit.fontawesome.com/843822ef05.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <header class="main-header">
@@ -34,21 +37,37 @@
                 </ul>
             </nav>
             <div class="search-bar">
-                <div class="search-bar__logo-container">Logo</div>
+                <div class="search-bar__logo-container">
+                    <img
+                        src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-eyeshadow-cosmetics-justicon-lineal-color-justicon-2.png"
+                        class="search-bar__logo-makeup"
+                    />
+                </div>
                 <form class="search-bar__form-container">
-                    <label class="search-bar__form-label" for="busqueda"
-                        >Buscar</label
-                    >
+                    <!-- <label class="search-bar__form-label" for="busqueda"
+                        ></label
+                    > -->
                     <input
                         class="search-bar__form-search"
                         id="busqueda"
                         type="search"
+                        placeholder="Buscar"
                     />
-                    <input
+
+                    <a
+                        href=""
                         class="search-bar__form-submit"
                         type="submit"
                         value="Buscar"
-                    />
+                    >
+                        <i class="fas fa-search"> </i>
+                    </a>
+
+                    <!-- <input
+                        class="search-bar__form-submit"
+                        type="submit"
+                        value="Buscar"
+                    /> -->
                 </form>
                 <div class="search-bar__carrito-container">C</div>
                 <div class="menu-toggle">
@@ -63,8 +82,9 @@
         <main>
             <section class="section-cards">
                 <header class="section-cards__header">
-                    <h1>Lorem ipsum dolor sit amet consectetur</h1>
-                    <p>Se encontraron x productos</p>
+                    <h1>
+                        ELIGE, PAGA Y RECIBE TU PEDIDO SIN MOVERTE DE TU CASA.
+                    </h1>
                 </header>
 
                 <div class="cards-container">
