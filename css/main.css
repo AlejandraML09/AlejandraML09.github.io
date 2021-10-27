@@ -1,0 +1,348 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  outline: none;
+  flex-grow: 1;
+  width: 220px;
+  max-width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background-color: aqua;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0), 0 0 3px rgba(0, 0, 0, 0);
+  border-radius: 5px 5px 0 0;
+  color: black;
+  transition: all 0.2s;
+  background-color: orange;
+  /*background-color 3s,transform 5s */
+}
+.card .card:hover,
+.card .card:focus {
+  background-color: lightseagreen;
+  transform: scale(1.03) skewX();
+  transform-origin: bottom;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
+  /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
+      0 3 3px rgba(0, 0, 0, -0.01);*/
+}
+.card .card:nth-child(5n+1) {
+  background-image: linear-gradient(to top, #db253d 5%, #804bbd 20%, #285e91 30%);
+}
+.card .card:nth-child(2n+1) {
+  background-image: linear-gradient(to top, #978184 5%, yellow 20%, orange 30%);
+}
+.card .card_image--container {
+  height: 200px;
+  background-color: beige;
+  /* overflow: hidden; */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+  /* transform:scale(1.1) rotate(20deg); */
+}
+.card .card:hover .card_image--container,
+.card .card:focus .card_image--container {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+  clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+  /* transform:scale(1.1) rotate(20deg); */
+}
+.card .card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.2s;
+}
+.card .card__content {
+  padding: 1em;
+}
+.card .card:hover.card-image,
+.card .card:focus.card-image {
+  transform: scale(1.4) rotate 5deg;
+  transform-origin: center;
+}
+@media (min-width: 1024) {
+  .card .card {
+    min-width: 240px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .card .card {
+    min-width: 400px;
+    max-width: 500px;
+    height: 200px;
+  }
+  .card .card__article {
+    display: flex;
+  }
+  .card .card .card_image--container,
+.card .card .card_image--container {
+    width: 40%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+  .card .card:hover .card_image--container,
+.card .card:focus .card_image--container {
+    width: 40%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.card:hover,
+.card:focus {
+  background-color: lightseagreen;
+  transform: scale(1.03) skewX();
+  transform-origin: bottom;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
+  /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
+      0 3 3px rgba(0, 0, 0, -0.01);*/
+}
+
+.card:nth-child(5n+1) {
+  background-image: linear-gradient(to top, #db253d 5%, #804bbd 20%, #285e91 30%);
+}
+
+.card:nth-child(2n+1) {
+  background-image: linear-gradient(to top, #978184 5%, yellow 20%, orange 30%);
+}
+
+.card_image--container {
+  height: 200px;
+  background-color: beige;
+  /* overflow: hidden; */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+  /* transform:scale(1.1) rotate(20deg); */
+}
+
+.card:hover .card_image--container,
+.card:focus .card_image--container {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+  clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+  /* transform:scale(1.1) rotate(20deg); */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.2s;
+}
+
+.card__content {
+  padding: 1em;
+}
+
+.card:hover.card-image,
+.card:focus.card-image {
+  transform: scale(1.4) rotate 5deg;
+  transform-origin: center;
+}
+
+@media (min-width: 1024) {
+  .card {
+    min-width: 240px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .card {
+    min-width: 400px;
+    max-width: 500px;
+    height: 200px;
+  }
+
+  .card__article {
+    display: flex;
+  }
+
+  .card .card_image--container,
+.card .card_image--container {
+    width: 40%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+
+  .card:hover .card_image--container,
+.card:focus .card_image--container {
+    width: 40%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+/************************
+            HEADER
+***************************/
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  display: none;
+}
+#menu:checked + .nav-bar {
+  border: 2px solid darksalmon;
+  display: block;
+}
+#menu:checked ~ .search-bar .menu-toggle__label {
+  background-color: dodgerblue;
+}
+
+/*****************************************
+     BARRA DE NAVEGACIÓN (NAV-BAR) -> Tiene adentro los UL's que es la LISTA de navegación de la Nav-bar.
+******************************************/
+.nav-bar {
+  background-color: cadetblue;
+}
+
+.nav-bar__nav-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.nav-bar__nav-item {
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.nav-bar__nav-link {
+  display: block;
+  background-color: darkslateblue;
+  color: black;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+
+/************************
+        SEARCH BAR
+***************************/
+.search-bar {
+  display: flex;
+  background-color: beige;
+  justify-content: space-between;
+}
+
+.search-bar__logo-container,
+.search-bar__form-container {
+  padding: 1em;
+}
+
+.search-bar__logo-container {
+  background-color: slategrey;
+}
+
+.search-bar__form-container {
+  background-color: salmon;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar__form-label {
+  background-color: sandybrown;
+}
+
+.search-bar__form-search {
+  width: 70%;
+  background-color: rosybrown;
+}
+
+.search-bar__form-submit {
+  background-color: plum;
+}
+
+.search-bar__carrito-container {
+  flex-grow: 0 0 3em;
+  background-color: powderblue;
+}
+
+/*********************************
+    TOGGLE DEL MENU -> Son los que están después del Carrito
+************************************/
+.menu-toggle {
+  display: none;
+  background-color: skyblue;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-toggle__label {
+  display: block;
+  background-color: #9c6410;
+  /* width: 100%; --
+  height: 100%; */
+}
+
+.menu-toggle__top-bread,
+.menu-toggle__meat,
+.menu-toggle__bottom-bread {
+  display: block;
+  background-color: black;
+  height: 0.2em;
+  position: absolute;
+  left: 0.5em;
+  right: 0.5em;
+}
+
+.menu-toggle__top-bread {
+  top: 0.8em;
+}
+
+.menu-toggle__meat {
+  top: 50%;
+  margin-top: -0.1em;
+}
+
+.menu-toggle__bottom-bread {
+  bottom: 0.8em;
+}
+
+/********************************
+Es para los cambios según RESOLUCIÓN.
+*********************************/
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column-reverse;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-bar__nav-list {
+    flex-direction: column;
+  }
+}
+.section-cards {
+  background-color: #f1f2f3;
+  padding: 1em;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .cards-container {
+    gap: 2em;
+  }
+}/*# sourceMappingURL=main.css.map */

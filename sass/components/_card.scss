@@ -1,0 +1,120 @@
+.card {
+    outline: none;
+    flex-grow: 1;
+    width: 220px;
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: aqua;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
+    border-radius: 5px 5px 0 0;
+    color: black;
+    transition: all 0.2s;
+    background-color: orange;
+
+    /*background-color 3s,transform 5s */
+
+    &:hover,
+    &:focus {
+        background-color: lightseagreen;
+        -moz-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03) skewX();
+        -moz-transform-origin: bottom;
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+        box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
+
+        /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
+        0 3 3px rgba(0, 0, 0, -0.01);*/
+    }
+
+    &:nth-child(5n + 1) {
+        background-image: linear-gradient(
+            to top,
+            rgb(219, 37, 61) 5%,
+            rgb(128, 75, 189) 20%,
+            rgb(40, 94, 145) 30%
+        );
+    }
+
+    &:nth-child(2n + 1) {
+        background-image: linear-gradient(
+            to top,
+            rgb(151, 129, 132) 5%,
+            yellow 20%,
+            orange 30%
+        );
+    }
+}
+
+.card_image--container {
+    height: 200px;
+    background-color: beige;
+
+    /* overflow: hidden; */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+    clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+
+    /* transform:scale(1.1) rotate(20deg); */
+}
+
+.card {
+    &:hover .card_image--container,
+    &:focus .card_image--container {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+        clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+
+        /* transform:scale(1.1) rotate(20deg); */
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.card__content {
+    padding: 1em;
+}
+
+.card {
+    &:hover.card-image,
+    &:focus.card-image {
+        // transform: scale(1.4) rotate (5deg);
+        transform-origin: center;
+    }
+}
+
+@media (min-width: 1024) {
+    .card {
+        min-width: 240px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .card {
+        min-width: 400px;
+        max-width: 500px;
+        height: 200px;
+    }
+
+    .card__article {
+        display: flex;
+    }
+
+    .card {
+        .card_image--container {
+            width: 40%;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        }
+
+        &:hover .card_image--container,
+        &:focus .card_image--container {
+            width: 40%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+}
