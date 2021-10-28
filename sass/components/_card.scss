@@ -4,18 +4,18 @@
     width: 220px;
     max-width: 300px;
     height: 400px;
-    overflow: hidden;
-    background-color: aqua;
+    // overflow: hidden;
+    // background-color: aqua;
     box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
     border-radius: 5px 5px 0 0;
     color: black;
     transition: all 0.2s;
-    background-color: orange;
+    // background-color: orange;
     /*background-color 3s,transform 5s */
 
     &:hover,
     &:focus {
-        background-color: lightseagreen;
+        // background-color: lightseagreen;
         -moz-transform: scale(1.03);
         -webkit-transform: scale(1.03);
         transform: scale(1.03) skewX();
@@ -28,45 +28,54 @@
         0 3 3px rgba(0, 0, 0, -0.01);*/
     }
 
-    &:nth-child(5n + 1) {
-        background-image: linear-gradient(
-            to top,
-            rgb(219, 37, 61) 5%,
-            rgb(128, 75, 189) 20%,
-            rgb(40, 94, 145) 30%
-        );
-    }
+    // &:nth-child(5n + 1) {
+    //     background-image: linear-gradient(
+    //         to top,
+    //         rgb(219, 37, 61) 5%,
+    //         rgb(128, 75, 189) 20%,
+    //         rgb(40, 94, 145) 30%
+    //     );
+    // }
 
-    &:nth-child(2n + 1) {
-        background-image: linear-gradient(
-            to top,
-            rgb(151, 129, 132) 5%,
-            yellow 20%,
-            orange 30%
-        );
-    }
+    // &:nth-child(2n + 1) {
+    //     background-image: linear-gradient(
+    //         to top,
+    //         rgb(151, 129, 132) 5%,
+    //         yellow 20%,
+    //         orange 30%
+    //     );
+    // }
 }
 
 .card_image--container {
     height: 200px;
-    background-color: beige;
+    // background-color: beige;
 
     /* overflow: hidden; */
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
-    clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 10px, 0 10px);
+    // clip-path: polygon(0 0, 100% 0, 100% 10px, 0 10px);
 
     /* transform:scale(1.1) rotate(20deg); */
-}
 
-.card {
-    &:hover .card_image--container,
-    &:focus .card_image--container {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
-        clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+    &:nth-of-type(1) {
+        background-image: url(/imagenes/camara.gif);
+    }
 
-        /* transform:scale(1.1) rotate(20deg); */
+    
+    img {
+        display:none;
     }
 }
+
+// .card {
+//     &:hover .card_image--container,
+//     &:focus .card_image--container {
+//         -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+//         clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+
+//         /* transform:scale(1.1) rotate(20deg); */
+//     }
+// }
 
 .card-image {
     width: 100%;
@@ -77,7 +86,18 @@
 
 .card__content {
     padding: 1em;
+    background-color: hsl(0 0% 0% / 0);
 }
+
+/* CAMBIOS */
+.card_heading::after {
+    position: absolute;
+    height: 3px;
+    width:100%;
+    background:green;
+}
+
+
 
 .card {
     &:hover.card-image,
@@ -120,6 +140,11 @@
 
 /* cards style */
 
+.item__display {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
@@ -158,15 +183,13 @@
 .flip-card-front {
     background-color: #bbb;
     color: black;
-    overflow:hidden;
-    height:400px;
-    background-image:url(/imagenes/xiaomi-airdots_3.jpg);
-    display:flex;
+    overflow: hidden;
+    height: 400px;
+    background-image: url(/imagenes/xiaomi-airdots_3.jpg);
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     border-radius: 5px;
-
-    
 }
 
 /* Style the back side */
@@ -174,9 +197,11 @@
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
-    height:400px;
-    display:flex;
+    height: 400px;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     border-radius: 5px;
 }
+
+/* CARTAS NUEVAS */

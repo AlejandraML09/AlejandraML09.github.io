@@ -17,43 +17,30 @@
   width: 220px;
   max-width: 300px;
   height: 400px;
-  overflow: hidden;
-  background-color: aqua;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0), 0 0 3px rgba(0, 0, 0, 0);
   border-radius: 5px 5px 0 0;
   color: black;
   transition: all 0.2s;
-  background-color: orange;
   /*background-color 3s,transform 5s */
 }
 .card:hover, .card:focus {
-  background-color: lightseagreen;
   transform: scale(1.03) skewX();
   transform-origin: bottom;
   box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
   /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
   0 3 3px rgba(0, 0, 0, -0.01);*/
 }
-.card:nth-child(5n+1) {
-  background-image: linear-gradient(to top, #db253d 5%, #804bbd 20%, #285e91 30%);
-}
-.card:nth-child(2n+1) {
-  background-image: linear-gradient(to top, #978184 5%, yellow 20%, orange 30%);
-}
 
 .card_image--container {
   height: 200px;
-  background-color: beige;
   /* overflow: hidden; */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
-  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
   /* transform:scale(1.1) rotate(20deg); */
 }
-
-.card:hover .card_image--container, .card:focus .card_image--container {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
-  /* transform:scale(1.1) rotate(20deg); */
+.card_image--container:nth-of-type(1) {
+  background-image: url(/imagenes/camara.gif);
+}
+.card_image--container img {
+  display: none;
 }
 
 .card-image {
@@ -66,6 +53,15 @@
 
 .card__content {
   padding: 1em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* CAMBIOS */
+.card_heading::after {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: green;
 }
 
 .card:hover.card-image, .card:focus.card-image {
@@ -100,6 +96,11 @@
   }
 }
 /* cards style */
+.item__display {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
@@ -161,13 +162,16 @@
   border-radius: 5px;
 }
 
+/* CARTAS NUEVAS */
 /* colorcitos */
 /************************
             HEADER
 ***************************/
 .main-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2A2A2A;
 }
 
 #menu {
@@ -186,7 +190,6 @@
 ******************************************/
 /* Contiene toda la lista entera -> Contiene el NAV */
 .nav-bar {
-  background-color: #ddcad9ff;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -196,28 +199,26 @@
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
-  justify-content: space-around;
 }
 
 /* Esto es el li */
 .nav-bar__nav-item {
   text-align: center;
-  box-sizing: content-box;
   border: 5px solid transparent;
 }
 
 /* Link de cada uno */
 .nav-bar__nav-link {
   display: block;
-  background-color: #ddcad9ff;
-  color: black;
+  background-color: #2A2A2A;
+  color: #FEFEFE;
   padding: 0.7em 2em;
   text-decoration: none;
 }
 
 /* Hover para la línea de abajo */
 .nav-bar__nav-list li:hover {
-  border-bottom: 5px solid #7c616cff;
+  border-bottom: 5px solid #007DFC;
   transition: all ease 0.3s;
 }
 
@@ -226,8 +227,8 @@
 ***************************/
 .search-bar {
   display: flex;
-  background-color: #7c616cff;
-  justify-content: space-between;
+  padding-right: 200px;
+  background-color: #2A2A2A;
 }
 
 .search-bar__logo-container,
@@ -237,32 +238,27 @@
 
 /* LOGO */
 .search-bar__logo-container {
-  background-color: #d1b1cbff;
-}
-
-.search-bar__logo-makeup {
-  width: 40px;
+  color: white;
+  display: flex;
 }
 
 /* Contenedor de la Barra de búsqueda */
 .search-bar__form-container {
-  background-color: #d1b1cbff;
+  background-color: #2A2A2A;
   flex-basis: 100%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 /* El "Buscar" */
 .search-bar__form-label {
-  background-color: #d1b1cbff;
+  background-color: #2A2A2A;
   margin-right: 0.5em;
 }
 
 /* El form para buscar -> Input */
 .search-bar__form-search {
   width: 20%;
-  background-color: #e5e9ecff;
-  border-bottom: 1px solid #7c616cff;
+  background-color: #FEFEFE;
+  border-bottom: 1px solid #007DFC;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
@@ -273,15 +269,15 @@
 }
 .search-bar__form-search::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #7c616cff;
+  color: #121212;
 }
 .search-bar__form-search:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #7c616cff;
+  color: #121212;
 }
 .search-bar__form-search::placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #7c616cff;
+  color: #121212;
 }
 
 /* Botón de buscar con el Magnifying glass */
@@ -289,13 +285,14 @@
   margin-left: 0.5em;
 }
 .search-bar__form-submit:visited {
-  color: #7c616cff;
+  color: #121212;
 }
 
 /* Icono para buscar directamente */
 .fa-search {
   margin-left: 0.5em;
   margin: auto;
+  color: #FEFEFE;
 }
 
 .search-bar__carrito-container {

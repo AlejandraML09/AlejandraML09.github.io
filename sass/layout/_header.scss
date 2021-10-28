@@ -6,7 +6,9 @@
 
 .main-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $nav-bar-color;
 }
 
 #menu {
@@ -29,7 +31,6 @@
 ******************************************/
 /* Contiene toda la lista entera -> Contiene el NAV */
 .nav-bar {
-    background-color: $languid-lavender;
     position: sticky;
     top: 0;
 }
@@ -38,28 +39,26 @@
 .nav-bar__nav-list {
     display: flex;
     list-style-type: none;
-    justify-content: space-around;
 }
 
 /* Esto es el li */
 .nav-bar__nav-item {
     text-align: center;
-    box-sizing: content-box;
     border: 5px solid transparent;
 }
 
 /* Link de cada uno */
 .nav-bar__nav-link {
     display: block;
-    background-color: $languid-lavender;
-    color: black;
+    background-color: $nav-bar-color;
+    color: $light-text-color;
     padding: 0.7em 2em;
     text-decoration: none;
 }
 
 /* Hover para la línea de abajo */
 .nav-bar__nav-list li:hover {
-    border-bottom: 5px solid $old-lavender;
+    border-bottom: 5px solid $highlight-color;
     transition: all ease 0.3s;
 }
 
@@ -69,42 +68,42 @@
 
 .search-bar {
     display: flex;
-    background-color: $old-lavender;
-    justify-content: space-between;
+    padding-right: 200px;
+    background-color: $nav-bar-color;
 }
 
 .search-bar__logo-container,
 .search-bar__form-container {
     padding: 1em;
+    
 }
 
 /* LOGO */
 .search-bar__logo-container {
-    background-color: $pink-lavender;
+    color: white;
+    display:flex;
+    
 }
-.search-bar__logo-makeup {
-    width: 40px;
-}
+
 
 /* Contenedor de la Barra de búsqueda */
 .search-bar__form-container {
-    background-color: $pink-lavender;
+    background-color: $nav-bar-color;
     flex-basis: 100%;
-    display: flex;
-    justify-content: flex-end;
+
 }
 
 /* El "Buscar" */
 .search-bar__form-label {
-    background-color: $pink-lavender;
+    background-color: $nav-bar-color;
     margin-right: 0.5em;
 }
 
 /* El form para buscar -> Input */
 .search-bar__form-search {
     width: 20%;
-    background-color: $platinum;
-    border-bottom: 1px solid $old-lavender;
+    background-color: $light-text-color;
+    border-bottom: 1px solid $highlight-color;
     border-top: transparent;
     border-left: transparent;
     border-right: transparent;
@@ -116,7 +115,7 @@
 
     &::placeholder {
         font-family: "Montserrat", sans-serif;
-        color: $old-lavender;
+        color: $background-color;
     }
 }
 
@@ -125,7 +124,7 @@
     margin-left: 0.5em;
 
     &:visited {
-        color: $old-lavender;
+        color: $background-color;
     }
 }
 
@@ -133,6 +132,7 @@
 .fa-search {
     margin-left: 0.5em;
     margin: auto;
+    color:$light-text-color;
 }
 
 .search-bar__carrito-container {
