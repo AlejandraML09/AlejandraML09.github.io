@@ -1,5 +1,5 @@
 @import "../themes/theme";
-$card-height: 200px;
+$card-height: 400px;
 $card-width: 300px;
 
 .card {
@@ -38,7 +38,7 @@ $card-width: 300px;
 }
 
 /* Position the front and back side */
-.card_heading,
+.card__heading,
 .card__description {
     position: absolute;
     width: 100%;
@@ -48,12 +48,11 @@ $card-width: 300px;
 }
 
 /* Style the front side (fallback if image is missing) */
-.card_heading {
+.card__heading {
     background-color: #bbb;
     color: black;
     overflow: hidden;
     height: $card-height;
-    background-image: url(/imagenes/xiaomi-airdots_3.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +61,7 @@ $card-width: 300px;
 
 /* Style the back side */
 .card__description {
-    padding:1em;
+    padding: 1em;
     background-color: $nav-bar-color;
     color: white;
     transform: rotateY(180deg);
@@ -71,7 +70,6 @@ $card-width: 300px;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    
 }
 
 @media (min-width: 1024) {
@@ -90,4 +88,58 @@ $card-width: 300px;
     .card__article {
         display: flex;
     }
+}
+
+/* BANNERS */
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .banner__container:nth-of-type(2) {
+         background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
+    }
+     .banner__container:nth-of-type(3) {
+         background-image: linear-gradient(
+            to left,
+            rgba(39, 52, 126, 0.3),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url(/imagenes/yeti-x-hero-special-desktop.jpg);
+    }
+}
+
+.banner__container {
+    margin: 1em;
+    padding: 1.5em;
+    width: 30%;
+    min-height: 200px;
+    min-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    background-image: linear-gradient(
+            to left,
+            rgba(39, 52, 126, 0.3),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url(/imagenes/hx-hero-headset-alpha-lg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }   
+
+
+
+.banner__title {
+    color: $light-text-color;
+    text-shadow: 1px 1px 2px black;
+}
+
+.banner__container:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
 }

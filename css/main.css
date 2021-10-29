@@ -17,7 +17,7 @@
   flex-grow: 1;
   width: 300px;
   max-width: 300px;
-  height: 200px;
+  height: 400px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0), 0 0 3px rgba(0, 0, 0, 0);
   border-radius: 5px 5px 0 0;
 }
@@ -39,7 +39,7 @@
 .card__flip {
   background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 400px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -50,7 +50,7 @@
 }
 
 /* Position the front and back side */
-.card_heading,
+.card__heading,
 .card__description {
   position: absolute;
   width: 100%;
@@ -61,12 +61,11 @@
 }
 
 /* Style the front side (fallback if image is missing) */
-.card_heading {
+.card__heading {
   background-color: #bbb;
   color: black;
   overflow: hidden;
-  height: 200px;
-  background-image: url(/imagenes/xiaomi-airdots_3.jpg);
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +78,7 @@
   background-color: #2A2A2A;
   color: white;
   transform: rotateY(180deg);
-  height: 200px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,6 +101,46 @@
     display: flex;
   }
 }
+/* BANNERS */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.banner .banner__container:nth-of-type(2) {
+  background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
+}
+.banner .banner__container:nth-of-type(3) {
+  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url(/imagenes/yeti-x-hero-special-desktop.jpg);
+}
+
+.banner__container {
+  margin: 1em;
+  padding: 1.5em;
+  width: 30%;
+  min-height: 200px;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url(/imagenes/hx-hero-headset-alpha-lg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__title {
+  color: #FEFEFE;
+  text-shadow: 1px 1px 2px black;
+}
+
+.banner__container:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
 /* colorcitos */
 /************************
             HEADER
@@ -299,8 +338,13 @@ Es para los cambios según RESOLUCIÓN.
     flex-direction: column;
   }
 }
+/* colorcitos */
+body {
+  background-color: #121212;
+  color: #FEFEFE;
+}
+
 .section-cards {
-  background-color: #f1f2f3;
   padding: 1em;
 }
 
@@ -308,8 +352,37 @@ Es para los cambios según RESOLUCIÓN.
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 5em;
+  margin-top: 5em;
+}
+.cards-container .card:nth-of-type(1) .card__heading {
+  background-image: url(/imagenes/teclado-logitech.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+.cards-container .card:nth-of-type(2) .card__heading {
+  background-image: url(/imagenes/Teclado-gamer-HyperX.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+.cards-container .card:nth-of-type(3) .card__heading {
+  background-image: url(/imagenes/teclado-razer.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+.cards-container .card:nth-of-type(4) .card__heading {
+  background-image: url(/imagenes/redragon-teclado.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
 }
 
 @media (min-width: 1200px) {
