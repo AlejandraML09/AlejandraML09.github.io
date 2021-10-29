@@ -19,7 +19,6 @@
   height: 400px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0), 0 0 3px rgba(0, 0, 0, 0);
   border-radius: 5px 5px 0 0;
-  color: black;
   transition: all 0.2s;
   /*background-color 3s,transform 5s */
 }
@@ -27,17 +26,12 @@
   transform: scale(1.03) skewX();
   transform-origin: bottom;
   box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
-  /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
-  0 3 3px rgba(0, 0, 0, -0.01);*/
 }
 
 .card_image--container {
   height: 200px;
   /* overflow: hidden; */
   /* transform:scale(1.1) rotate(20deg); */
-}
-.card_image--container:nth-of-type(1) {
-  background-image: url(/imagenes/camara.gif);
 }
 .card_image--container img {
   display: none;
@@ -54,14 +48,6 @@
 .card__content {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0);
-}
-
-/* CAMBIOS */
-.card_heading::after {
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: green;
 }
 
 .card:hover.card-image, .card:focus.card-image {
@@ -96,16 +82,19 @@
   }
 }
 /* cards style */
-.item__display {
+.flip-card-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 200px;
+  margin-bottom: 5em;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 0px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -113,7 +102,6 @@
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -142,7 +130,7 @@
   background-color: #bbb;
   color: black;
   overflow: hidden;
-  height: 400px;
+  height: 200px;
   background-image: url(/imagenes/xiaomi-airdots_3.jpg);
   display: flex;
   justify-content: center;
@@ -155,7 +143,7 @@
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
-  height: 400px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,7 +215,6 @@
 ***************************/
 .search-bar {
   display: flex;
-  padding-right: 200px;
   background-color: #2A2A2A;
 }
 
@@ -256,8 +243,7 @@
 
 /* El form para buscar -> Input */
 .search-bar__form-search {
-  width: 20%;
-  background-color: #FEFEFE;
+  color: #FEFEFE;
   border-bottom: 1px solid #007DFC;
   border-top: transparent;
   border-left: transparent;
@@ -269,15 +255,15 @@
 }
 .search-bar__form-search::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #121212;
+  color: #999;
 }
 .search-bar__form-search:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #121212;
+  color: #999;
 }
 .search-bar__form-search::placeholder {
   font-family: "Montserrat", sans-serif;
-  color: #121212;
+  color: #999;
 }
 
 /* Botón de buscar con el Magnifying glass */
@@ -372,6 +358,18 @@ Es para los cambios según RESOLUCIÓN.
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
+}
+.cards-container .card:nth-of-type(1) {
+  background-image: url(/imagenes/camara.gif);
+}
+.cards-container .card:nth-of-type(2) {
+  background-image: url(/imagenes/iPhone_Plegable-1000x600.jpg);
+}
+.cards-container .card:nth-of-type(3) {
+  background-image: url(/imagenes/xiaomi-airdots_3.jpg);
+}
+.cards-container .card:nth-of-type(4) {
+  background-image: url(/imagenes/chromcast.jpg);
 }
 
 @media (min-width: 1200px) {

@@ -1,3 +1,15 @@
+$card-height:200px;
+
+
+
+
+
+
+
+
+
+
+
 .card {
     outline: none;
     flex-grow: 1;
@@ -8,7 +20,7 @@
     // background-color: aqua;
     box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
     border-radius: 5px 5px 0 0;
-    color: black;
+  
     transition: all 0.2s;
     // background-color: orange;
     /*background-color 3s,transform 5s */
@@ -24,27 +36,9 @@
         transform-origin: bottom;
         box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
 
-        /* box-shadow: 0 7px 8px rgba(0, 0green, 0blue, 0.05),
-        0 3 3px rgba(0, 0, 0, -0.01);*/
+
     }
 
-    // &:nth-child(5n + 1) {
-    //     background-image: linear-gradient(
-    //         to top,
-    //         rgb(219, 37, 61) 5%,
-    //         rgb(128, 75, 189) 20%,
-    //         rgb(40, 94, 145) 30%
-    //     );
-    // }
-
-    // &:nth-child(2n + 1) {
-    //     background-image: linear-gradient(
-    //         to top,
-    //         rgb(151, 129, 132) 5%,
-    //         yellow 20%,
-    //         orange 30%
-    //     );
-    // }
 }
 
 .card_image--container {
@@ -57,11 +51,6 @@
 
     /* transform:scale(1.1) rotate(20deg); */
 
-    &:nth-of-type(1) {
-        background-image: url(/imagenes/camara.gif);
-    }
-
-    
     img {
         display:none;
     }
@@ -88,16 +77,6 @@
     padding: 1em;
     background-color: hsl(0 0% 0% / 0);
 }
-
-/* CAMBIOS */
-.card_heading::after {
-    position: absolute;
-    height: 3px;
-    width:100%;
-    background:green;
-}
-
-
 
 .card {
     &:hover.card-image,
@@ -140,23 +119,26 @@
 
 /* cards style */
 
-.item__display {
+.flip-card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height:$card-height;
+    margin-bottom: 5em;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 200px;
+    height: 0px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-    position: relative;
+    
     width: 100%;
     height: 100%;
     text-align: center;
@@ -184,7 +166,7 @@
     background-color: #bbb;
     color: black;
     overflow: hidden;
-    height: 400px;
+    height: $card-height;
     background-image: url(/imagenes/xiaomi-airdots_3.jpg);
     display: flex;
     justify-content: center;
@@ -197,7 +179,7 @@
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
-    height: 400px;
+    height: $card-height;
     display: flex;
     justify-content: center;
     align-items: center;

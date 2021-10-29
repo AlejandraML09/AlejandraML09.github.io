@@ -68,7 +68,6 @@
 
 .search-bar {
     display: flex;
-    padding-right: 200px;
     background-color: $nav-bar-color;
 }
 
@@ -90,6 +89,7 @@
 .search-bar__form-container {
     background-color: $nav-bar-color;
     flex-basis: 100%;
+    
 
 }
 
@@ -101,13 +101,13 @@
 
 /* El form para buscar -> Input */
 .search-bar__form-search {
-    width: 20%;
-    background-color: $light-text-color;
+    color:$light-text-color;
     border-bottom: 1px solid $highlight-color;
     border-top: transparent;
     border-left: transparent;
     border-right: transparent;
     background-color: transparent;
+    
 
     &:focus {
         outline: none;
@@ -115,7 +115,7 @@
 
     &::placeholder {
         font-family: "Montserrat", sans-serif;
-        color: $background-color;
+        color:$secondary-text-color;
     }
 }
 
