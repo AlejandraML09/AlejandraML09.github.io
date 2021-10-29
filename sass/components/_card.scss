@@ -1,89 +1,77 @@
-$card-height:200px;
-
-
-
-
-
-
-
-
-
-
+@import "../themes/theme";
+$card-height: 200px;
+$card-width: 300px;
 
 .card {
     outline: none;
     flex-grow: 1;
-    width: 220px;
+    width: $card-width;
     max-width: 300px;
-    height: 400px;
-    // overflow: hidden;
-    // background-color: aqua;
+    height: $card-height;
     box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
     border-radius: 5px 5px 0 0;
-  
-    transition: all 0.2s;
-    // background-color: orange;
-    /*background-color 3s,transform 5s */
-
-    &:hover,
-    &:focus {
-        // background-color: lightseagreen;
-        -moz-transform: scale(1.03);
-        -webkit-transform: scale(1.03);
-        transform: scale(1.03) skewX();
-        -moz-transform-origin: bottom;
-        -webkit-transform-origin: bottom;
-        transform-origin: bottom;
-        box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05) 0 3 3px rgba(0, 0, 0, 0.01);
-
-
-    }
-
 }
-
-.card_image--container {
-    height: 200px;
-    // background-color: beige;
-
-    /* overflow: hidden; */
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 10px, 0 10px);
-    // clip-path: polygon(0 0, 100% 0, 100% 10px, 0 10px);
-
-    /* transform:scale(1.1) rotate(20deg); */
-
-    img {
-        display:none;
-    }
-}
-
-// .card {
-//     &:hover .card_image--container,
-//     &:focus .card_image--container {
-//         -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
-//         clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
-
-//         /* transform:scale(1.1) rotate(20deg); */
-//     }
-// }
 
 .card-image {
+    display: none;
+}
+/* This container is needed to position the front and back side */
+.card__content {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: 0.2s;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.card__content {
-    padding: 1em;
-    background-color: hsl(0 0% 0% / 0);
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.card__flip {
+    background-color: transparent;
+    width: $card-width;
+    height: $card-height;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.card {
-    &:hover.card-image,
-    &:focus.card-image {
-        // transform: scale(1.4) rotate (5deg);
-        transform-origin: center;
-    }
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.card__flip:hover .card__content {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card_heading,
+.card__description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.card_heading {
+    background-color: #bbb;
+    color: black;
+    overflow: hidden;
+    height: $card-height;
+    background-image: url(/imagenes/xiaomi-airdots_3.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Style the back side */
+.card__description {
+    padding:1em;
+    background-color: $nav-bar-color;
+    color: white;
+    transform: rotateY(180deg);
+    height: $card-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
 }
 
 @media (min-width: 1024) {
@@ -102,88 +90,4 @@ $card-height:200px;
     .card__article {
         display: flex;
     }
-
-    .card {
-        .card_image--container {
-            width: 40%;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-        }
-
-        &:hover .card_image--container,
-        &:focus .card_image--container {
-            width: 40%;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-    }
 }
-
-/* cards style */
-
-.flip-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    height:$card-height;
-    margin-bottom: 5em;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 0px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-    
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-    overflow: hidden;
-    height: $card-height;
-    background-image: url(/imagenes/xiaomi-airdots_3.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-/* Style the back side */
-.flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-    height: $card-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-/* CARTAS NUEVAS */
