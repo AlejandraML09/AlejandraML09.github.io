@@ -17,35 +17,52 @@ body {
     margin-bottom: 5em;
     margin-top: 5em;
 
+    /* Teclados */
     .card:nth-of-type(1) .card__heading {
         background-image: url(/imagenes/teclado-logitech.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: white;
     }
     .card:nth-of-type(2) .card__heading {
         background-image: url(/imagenes/Teclado-gamer-HyperX.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: white;
     }
 
     .card:nth-of-type(3) .card__heading {
         background-image: url(/imagenes/teclado-razer.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: white;
     }
 
     .card:nth-of-type(4) .card__heading {
         background-image: url(/imagenes/redragon-teclado.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: white;
+    }
+}
+
+/* Microfonos */
+#microphones__container {
+    .card:nth-of-type(1) .card__heading {
+        background-image: url(/imagenes/microfono-razer_.jpg);
+    }
+    .card:nth-of-type(2) .card__heading {
+        background-image: url(/imagenes/microfono_hyperX.jpg);
+    }
+    .card:nth-of-type(3) .card__heading {
+        background-image: url(/imagenes/microfono_yeti.png);
+    }
+    .card:nth-of-type(4) .card__heading {
+        background-image: url(/imagenes/microfono_snowball.jpg);
+    }
+}
+
+/*Headsets */
+#headsets__container {
+    .card:nth-of-type(1) .card__heading {
+        background-image: url(/imagenes/headset_hyperX.jpg);
+    }
+    .card:nth-of-type(2) .card__heading {
+        background-image: url(/imagenes/headset_logitech.png);
+    }
+    .card:nth-of-type(3) .card__heading {
+        background-image: url(/imagenes/headset_razer.png);
+    }
+    .card:nth-of-type(4) .card__heading {
+        background-image: url(/imagenes/headset_redragon.png);
     }
 }
 

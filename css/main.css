@@ -62,7 +62,6 @@
 
 /* Style the front side (fallback if image is missing) */
 .card__heading {
-  background-color: #bbb;
   color: black;
   overflow: hidden;
   height: 400px;
@@ -70,6 +69,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
 }
 
 /* Style the back side */
@@ -150,6 +153,10 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: #2A2A2A;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 #menu {
@@ -168,9 +175,8 @@
 ******************************************/
 /* Contiene toda la lista entera -> Contiene el NAV */
 .nav-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* Contiene el ul */
@@ -206,6 +212,7 @@
 .search-bar {
   display: flex;
   background-color: #2A2A2A;
+  align-items: center;
 }
 
 .search-bar__logo-container,
@@ -213,10 +220,18 @@
   padding: 1em;
 }
 
+#search-bar__button {
+  display: none;
+}
+
 /* LOGO */
 .search-bar__logo-container {
   color: white;
   display: flex;
+}
+
+.logo-container__image {
+  height: 35px;
 }
 
 /* Contenedor de la Barra de búsqueda */
@@ -246,14 +261,17 @@
 .search-bar__form-search::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
   color: #999;
+  font-size: 1.2em;
 }
 .search-bar__form-search:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   color: #999;
+  font-size: 1.2em;
 }
 .search-bar__form-search::placeholder {
   font-family: "Montserrat", sans-serif;
   color: #999;
+  font-size: 1.2em;
 }
 
 /* Botón de buscar con el Magnifying glass */
@@ -273,7 +291,8 @@
 
 .search-bar__carrito-container {
   flex-grow: 0 0 3em;
-  background-color: powderblue;
+  background-color: #2A2A2A;
+  margin-right: 1.6em;
 }
 
 /*********************************
@@ -355,34 +374,47 @@ body {
   justify-content: center;
   margin-bottom: 5em;
   margin-top: 5em;
+  /* Teclados */
 }
 .cards-container .card:nth-of-type(1) .card__heading {
   background-image: url(/imagenes/teclado-logitech.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
 }
 .cards-container .card:nth-of-type(2) .card__heading {
   background-image: url(/imagenes/Teclado-gamer-HyperX.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
 }
 .cards-container .card:nth-of-type(3) .card__heading {
   background-image: url(/imagenes/teclado-razer.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
 }
 .cards-container .card:nth-of-type(4) .card__heading {
   background-image: url(/imagenes/redragon-teclado.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
+}
+
+/* Microfonos */
+#microphones__container .card:nth-of-type(1) .card__heading {
+  background-image: url(/imagenes/microfono-razer_.jpg);
+}
+#microphones__container .card:nth-of-type(2) .card__heading {
+  background-image: url(/imagenes/microfono_hyperX.jpg);
+}
+#microphones__container .card:nth-of-type(3) .card__heading {
+  background-image: url(/imagenes/microfono_yeti.png);
+}
+#microphones__container .card:nth-of-type(4) .card__heading {
+  background-image: url(/imagenes/microfono_snowball.jpg);
+}
+
+/*Headsets */
+#headsets__container .card:nth-of-type(1) .card__heading {
+  background-image: url(/imagenes/headset_hyperX.jpg);
+}
+#headsets__container .card:nth-of-type(2) .card__heading {
+  background-image: url(/imagenes/headset_logitech.png);
+}
+#headsets__container .card:nth-of-type(3) .card__heading {
+  background-image: url(/imagenes/headset_razer.png);
+}
+#headsets__container .card:nth-of-type(4) .card__heading {
+  background-image: url(/imagenes/headset_redragon.png);
 }
 
 @media (min-width: 1200px) {
