@@ -74,6 +74,10 @@
   background-position: center;
   background-color: white;
 }
+.card__heading h2 {
+  padding: 0.5em;
+  align-self: flex-start;
+}
 
 /* Style the back side */
 .card__description {

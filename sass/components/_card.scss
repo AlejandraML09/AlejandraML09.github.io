@@ -60,6 +60,12 @@ $card-width: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
+
+    h2 {
+        padding:0.5em;
+        align-self: flex-start;
+        
+    }
 }
 
 /* Style the back side */
