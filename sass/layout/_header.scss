@@ -34,9 +34,8 @@
 ******************************************/
 /* Contiene toda la lista entera -> Contiene el NAV */
 .nav-bar {
-    display:flex;
+    display: flex;
     align-items: center;
-    
 }
 
 /* Contiene el ul */
@@ -145,11 +144,9 @@
 
 .search-bar__carrito-container {
     flex-grow: 0 0 3em;
-     background-color: $nav-bar-color;
-     margin-right: 1.6em;
+    background-color: $nav-bar-color;
+    margin-right: 1.6em;
 }
-
-
 
 /*********************************
     TOGGLE DEL MENU -> Son los que están después del Carrito

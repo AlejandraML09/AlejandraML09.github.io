@@ -84,7 +84,7 @@
         </main>
 
         <!-- FORMULARIOS -->
-        <h1 class="title">Alta</h1>
+        <h1 class="title">Alta de Producto</h1>
         <form action="">
             <div class="form">
                 <div class="form-container">
@@ -163,11 +163,9 @@
                         >
                     </div>
                 </div>
-                <div class="form-container">
-                    <div>
-                        <label for="category">Categoría:</label>
-                    </div>
-                    <select id="category" name="category" required size="10">
+                <div class="form-container" id="#id-container">
+                    <label for="category">Categoría:</label>
+                    <select id="category" name="category" required size="5">
                         <optgroup label="Teclados">
                             <option value="k_mech">Mecánicos</option>
                             <option value="k_bluetooth">Bluetooth</option>
@@ -188,31 +186,30 @@
                     </select>
                 </div>
                 <div class="form-container">
-                    <form action="/action_page.php">
-                        <input type="file" id="myFile" name="filename" />
-                    </form>
+                    <label for="photo">Foto del Producto:*</label>
+                    <input type="file" id="photo" name="photo" required />
                 </div>
                 <div class="form-container">
                     <label for="detalles">Detalles:</label>
                     <textarea
-                        maxlength="150"
+                        maxlength="50"
                         name="details"
                         id="details"
                         cols="30"
-                        rows="10"
-                    >
-                    </textarea>
+                        rows="5"
+                    ></textarea>
+                </div>
+                <div class="form-container-row">
+                    <label class="free-shipping">Envio sin cargo:</label>
+                    <input
+                        type="checkbox"
+                        id="shipping"
+                        name="shipping"
+                        value="shipping"
+                    />
                 </div>
                 <div class="form-container">
-                    <label class="sedes-label">Envio sin cargo:</label>
-                    <div class="sedes-margin">
-                        <input
-                            type="checkbox"
-                            id="shipping"
-                            name="shipping"
-                            value="shipping"
-                        />
-                    </div>
+                    <button type="submit" value="submit">Enviar</button>
                 </div>
             </div>
         </form>

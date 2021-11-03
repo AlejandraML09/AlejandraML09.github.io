@@ -445,6 +445,12 @@ body {
   flex-direction: column;
 }
 
+.title {
+  text-align: center;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -454,6 +460,8 @@ body {
   width: 50%;
   margin: auto;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgba(18, 18, 18, 0.4);
 }
 
 .form-container {
@@ -463,8 +471,44 @@ body {
   align-content: center;
   padding: 0.5em;
 }
-.form-container input {
+.form-container input,
+.form-container textarea,
+.form-container option,
+.form-container optgroup,
+.form-container #shipping,
+.form-container #id-container,
+.form-container select {
   padding: 0.5em;
+  border: 0;
+  border-radius: 0.3em;
+  font-family: inherit;
+  font-size: inherit;
+  color: #FEFEFE;
+  background-color: #2A2A2A;
+}
+.form-container label {
+  padding-bottom: 0.5em;
+}
+.form-container button {
+  background-color: #007DFC;
+  border: none;
+  padding: 1em;
+  color: #FEFEFE;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.3em;
+}
+.form-container button:hover {
+  background-color: #218efc;
+}
+
+.form-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form-container-row input {
+  margin-left: 1.5em;
 }
 
 .background-video {
