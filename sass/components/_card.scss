@@ -2,6 +2,9 @@
 $card-height: 400px;
 $card-width: 300px;
 
+html {
+    scroll-behavior: smooth;
+}
 .card {
     outline: none;
     flex-grow: 1;
@@ -62,9 +65,8 @@ $card-width: 300px;
     background-color: white;
 
     h2 {
-        padding:0.5em;
+        padding: 0.5em;
         align-self: flex-start;
-        
     }
 }
 
@@ -105,7 +107,9 @@ $card-width: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
+    a {
+        text-decoration: none;
+    }
     .banner__container:nth-of-type(2) {
         background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
     }

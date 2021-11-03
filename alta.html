@@ -1,13 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <h1>Alta</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alta</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <main>
+            <header class="main-header">
+                <input type="checkbox" id="menu" />
+                <nav class="nav-bar">
+                    <ul class="nav-bar__nav-list">
+                        <li class="nav-bar__nav-item">
+                            <a class="nav-bar__nav-link" href="index.html"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li class="nav-bar__nav-item">
+                            <a class="nav-bar__nav-link" href="alta.html"
+                                >Alta</a
+                            >
+                        </li>
+                        <li class="nav-bar__nav-item">
+                            <a class="nav-bar__nav-link" href="contacto.html"
+                                >Contacto</a
+                            >
+                        </li>
+                        <li class="nav-bar__nav-item">
+                            <a class="nav-bar__nav-link" href="nosotros.html"
+                                >Nosotros</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <div class="search-bar__logo-container">
+                        <img
+                            src="/imagenes/3cea5f4612af4064a81e846a1df2afdb.png"
+                            alt="Logo Connecticus"
+                            class="logo-container__image"
+                        />
+                    </div>
+                    <form class="search-bar__form-container">
+                        <!-- <label class="search-bar__form-label" for="busqueda"
+                        ></label
+                    > -->
+                        <input
+                            class="search-bar__form-search"
+                            id="busqueda"
+                            type="search"
+                            placeholder="Buscar"
+                        />
+
+                        <a
+                            href=""
+                            class="search-bar__form-submit"
+                            type="submit"
+                            value="Buscar"
+                        >
+                            <i class="fas fa-search"> </i>
+                        </a>
+                        <input
+                            class="search-bar__form-submit"
+                            id="search-bar__button"
+                            type="submit"
+                            value="Buscar"
+                        />
+                    </form>
+                    <div class="search-bar__carrito-container">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="menu-toggle">
+                        <label class="menu-toggle__label" for="menu">
+                            <span class="menu-toggle__top-bread"></span>
+                            <span class="menu-toggle__meat"></span>
+                            <span class="menu-toggle__bottom-bread"></span>
+                        </label>
+                    </div>
+                </div>
+            </header>
+        </main>
+
+        <!-- FORMULARIOS -->
+        <h1 class="title">Alta</h1>
+        <form action="">
+            <div class="form">
+                <div class="form-container">
+                    <label for="name">Nombre:*</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Nombre"
+                    />
+                </div>
+                <div class="form-container">
+                    <label for="price">Precio:*</label>
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        required
+                        placeholder="Precio"
+                    />
+                </div>
+                <div class="form-container">
+                    <label for="stock">Stock:</label>
+                    <input
+                        type="number"
+                        id="stock"
+                        name="stock"
+                        required
+                        max="100"
+                        value="1"
+                    />
+                </div>
+                <div class="form-container">
+                    <label>Marca:*</label>
+                    <div>
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="brand"
+                                value="brand-hyperx"
+                                required
+                            />HyperX</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="brand"
+                                value="brand-razer"
+                                required
+                            />Razer</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="brand"
+                                value="brand-redragon"
+                                required
+                            />Redragon</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="brand"
+                                value="brand-logitech"
+                                required
+                            />Logitech</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="brand"
+                                value="brand-blue"
+                                required
+                            />Blue</label
+                        >
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div>
+                        <label for="category">Categoría:</label>
+                    </div>
+                    <select id="category" name="category" required size="10">
+                        <optgroup label="Teclados">
+                            <option value="k_mech">Mecánicos</option>
+                            <option value="k_bluetooth">Bluetooth</option>
+                            <option value="k_office">De oficina</option>
+                            <option value="k_gamer">Gamer</option>
+                        </optgroup>
+                        <optgroup label="Headsets">
+                            <option value="h_bluetooth">Bluetooth</option>
+                            <option value="h_usb">USB 3.0</option>
+                            <option value="h_3-5">3.5mm</option>
+                            <option value="h_7-1">7.1</option>
+                        </optgroup>
+                        <optgroup label="Microfono">
+                            <option value="m_stand">De Pie</option>
+                            <option value="m_filter">Filtros</option>
+                            <option value="m_bluetooth">Bluetooth</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-container">
+                    <form action="/action_page.php">
+                        <input type="file" id="myFile" name="filename" />
+                    </form>
+                </div>
+                <div class="form-container">
+                    <label for="detalles">Detalles:</label>
+                    <textarea
+                        maxlength="150"
+                        name="details"
+                        id="details"
+                        cols="30"
+                        rows="10"
+                    >
+                    </textarea>
+                </div>
+                <div class="form-container">
+                    <label class="sedes-label">Envio sin cargo:</label>
+                    <div class="sedes-margin">
+                        <input
+                            type="checkbox"
+                            id="shipping"
+                            name="shipping"
+                            value="shipping"
+                        />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <video class="background-video" autoplay muted loop id="myVideo">
+            <source
+                src="imagenes/Razer Basilisk V3   Full Spectrum Customizability.mp4"
+                type="video/mp4"
+            />
+        </video>
+    </body>
 </html>

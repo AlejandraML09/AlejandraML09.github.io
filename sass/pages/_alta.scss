@@ -1,0 +1,39 @@
+@import "../themes/theme";
+body {
+    color: $light-text-color;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding:0.5em;
+    
+    input {
+    padding: 0.5em;
+
+}
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}

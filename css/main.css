@@ -12,6 +12,10 @@
 }
 
 /* colorcitos */
+html {
+  scroll-behavior: smooth;
+}
+
 .card {
   outline: none;
   flex-grow: 1;
@@ -113,6 +117,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.banner a {
+  text-decoration: none;
 }
 .banner .banner__container:nth-of-type(2) {
   background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
@@ -429,4 +436,42 @@ body {
 /* colorcitos */
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+/* colorcitos */
+body {
+  color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0.5em;
+}
+.form-container input {
+  padding: 0.5em;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }/*# sourceMappingURL=main.css.map */
