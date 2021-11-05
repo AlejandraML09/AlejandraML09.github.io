@@ -1,13 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <h1>Contacto</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script
+            src="https://kit.fontawesome.com/843822ef05.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="contact-background">
+        <header class="main-header">
+            <input type="checkbox" id="menu" />
+            <nav class="nav-bar">
+                <ul class="nav-bar__nav-list">
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="index.html"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="contacto.html"
+                            >Contacto</a
+                        >
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="nosotros.html"
+                            >Nosotros</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <div class="search-bar__logo-container">
+                    <img
+                        src="/imagenes/3cea5f4612af4064a81e846a1df2afdb.png"
+                        alt="Logo Connecticus"
+                        class="logo-container__image"
+                    />
+                </div>
+                <form class="search-bar__form-container">
+                    <!-- <label class="search-bar__form-label" for="busqueda"
+                        ></label
+                    > -->
+                    <input
+                        class="search-bar__form-search"
+                        id="busqueda"
+                        type="search"
+                        placeholder="Buscar"
+                    />
+
+                    <a
+                        href=""
+                        class="search-bar__form-submit"
+                        type="submit"
+                        value="Buscar"
+                    >
+                        <i class="fas fa-search"> </i>
+                    </a>
+                    <input
+                        class="search-bar__form-submit"
+                        id="search-bar__button"
+                        type="submit"
+                        value="Buscar"
+                    />
+                </form>
+                <div class="search-bar__carrito-container">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="menu-toggle">
+                    <label class="menu-toggle__label" for="menu">
+                        <span class="menu-toggle__top-bread"></span>
+                        <span class="menu-toggle__meat"></span>
+                        <span class="menu-toggle__bottom-bread"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-contact">
+                <div class="contact__content">
+                    <h1 class="contact__bigger-title">Contacto</h1>
+                    <h2 class="contact__smaller-title">
+                        Conocé más sobre nuestros productos
+                    </h2>
+                    <p class="contanct__product-text">
+                        Completá el formulario y recibirás inmediatamente los
+                        mejores descuentos para tu headset, teclado o microfono.
+                    </p>
+                </div>
+                <form class="contact-form" action="">
+                    <div class="contact-form__container">
+                        <select name="product" id="product" required>
+                            <option value="">Elegí tu Producto</option>
+                            <option value="1">Teclados</option>
+                            <option value="2">Headsets</option>
+                            <option value="3">Microfonos</option>
+                            <option value="4">Otra</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__container">
+                        <select name="brand" id="brand" required>
+                            <option value="">Elegí tu Marca</option>
+                            <option value="5">HyperX</option>
+                            <option value="6">Redragon</option>
+                            <option value="7">Razer</option>
+                            <option value="8">Logitech</option>
+                            <option value="9">Otra</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Nombre"
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="text"
+                            id="lname"
+                            name="lname"
+                            required
+                            placeholder="Apellido"
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <i class="fas fa-mobile"></i>
+                        <input
+                            class="contact-form__phone"
+                            type="number"
+                            id="phone"
+                            name="phone"
+                            placeholder="Código de área y número"
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <textarea
+                            maxlength="50"
+                            name="comments"
+                            id="comments"
+                            cols="30"
+                            rows="5"
+                            placeholder="Comentarios"
+                        ></textarea>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
 </html>

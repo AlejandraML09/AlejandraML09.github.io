@@ -1,0 +1,54 @@
+@import "../themes/theme";
+
+.contact-background {
+    background-image: url(/imagenes/republicofgamers_asus.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex:1;
+}
+
+.contact-form__container {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+
+    input,
+    textarea,
+    option,
+    optgroup,
+    select {
+        padding: 0.5em;
+        border: 0;
+        border-radius: 0.3em;
+        font-family: inherit;
+        font-size: inherit;
+        color: $light-text-color;
+        background-color: $nav-bar-color;
+    }
+}
+
+.main-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 2em;
+    
+}
+.contact__content {
+    flex: 2;
+    max-width: 700px;
+}
+.contact__smaller-title {
+}
+
+.contact__product-text {
+    display: flex;
+}
