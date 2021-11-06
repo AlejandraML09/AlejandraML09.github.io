@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    flex:1;
+    flex: 1;
+    max-width: 750px;
 }
 
 .contact-form__container {
@@ -18,7 +19,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-   
 
     input,
     textarea,
@@ -33,22 +33,54 @@
         color: $light-text-color;
         background-color: $nav-bar-color;
     }
+    button {
+        background-color: $highlight-color;
+        border: none;
+        padding: 1em;
+        color: $light-text-color;
+        font-family: inherit;
+        font-size: inherit;
+        border-radius: 0.3em;
+
+        &:hover {
+            background-color: $highlight-color-hover;
+        }
+    }
 }
 
 .main-contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 2em;
     padding: 2em;
-    
 }
 .contact__content {
     flex: 2;
     max-width: 700px;
 }
-.contact__smaller-title {
+
+.contact__bigger-title {
+    margin-bottom: 0.5em;
+}
+.contact__product-text {
+    
+    
 }
 
-.contact__product-text {
-    display: flex;
+#contact-form__phone {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    
+    i {
+       font-size: 25px; 
+       margin-right: 0.5em;
+    }
+    #area-code {
+        margin-right:1em;
+        max-width: 160px;
+    }
+    #phone-number {
+        flex-grow:1;
+    }
 }

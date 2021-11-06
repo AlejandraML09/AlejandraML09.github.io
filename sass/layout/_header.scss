@@ -12,6 +12,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    overflow:hidden;
 }
 
 #menu {
@@ -19,7 +20,7 @@
 
     &:checked {
         + .nav-bar {
-            border: 2px solid darksalmon;
+            border-top: 2px solid $background-color;
             display: block;
         }
 
@@ -48,6 +49,11 @@
 .nav-bar__nav-item {
     text-align: center;
     border: 5px solid transparent;
+
+    &:hover {
+        border-bottom: 5px solid $highlight-color;
+        transition: all ease 0.3s;
+    }
 }
 
 /* Link de cada uno */
@@ -75,7 +81,6 @@
     align-items: center;
 }
 
-.search-bar__logo-container,
 .search-bar__form-container {
     padding: 1em;
 }
@@ -88,6 +93,9 @@
 .search-bar__logo-container {
     color: white;
     display: flex;
+    background-image: url(/imagenes/3cea5f4612af4064a81e846a1df2afdb.png);
+    width:270px;
+     padding: 1em;
 }
 
 .logo-container__image {
@@ -98,6 +106,8 @@
 .search-bar__form-container {
     background-color: $nav-bar-color;
     flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /* El "Buscar" */
@@ -145,7 +155,7 @@
 .search-bar__carrito-container {
     flex-grow: 0 0 3em;
     background-color: $nav-bar-color;
-    margin-right: 1.6em;
+    padding-right: 1.6em;
 }
 
 /*********************************
@@ -162,7 +172,6 @@
 
 .menu-toggle__label {
     display: block;
-    background-color: rgb(156, 100, 16);
 
     /* width: 100%; --
   height: 100%; */
@@ -172,7 +181,7 @@
 .menu-toggle__meat,
 .menu-toggle__bottom-bread {
     display: block;
-    background-color: black;
+    background-color: $light-text-color;
     height: 0.2em;
     position: absolute;
     left: 0.5em;
@@ -211,5 +220,9 @@ Es para los cambios según RESOLUCIÓN.
 
     .nav-bar__nav-list {
         flex-direction: column;
+    }
+    .search-bar__logo-container {
+        width:40px;
+        margin-left:1em;
     }
 }

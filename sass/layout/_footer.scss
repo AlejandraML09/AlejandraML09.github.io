@@ -1,18 +1,19 @@
 @import "../themes/theme";
 
-.footer__container {
+footer {
     background-color: $nav-bar-color;
     padding: 3em;
-    display:flex;
+    display: flex;
     flex-direction: column;
     
+    &:visited {
+        color: $background-color;
+    }
     a {
         text-decoration: none;
+        color:$light-text-color;
     }
-
 }
-
-
 
 .footer-title {
     color: $highlight-color;

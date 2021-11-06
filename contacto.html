@@ -37,17 +37,12 @@
                 </ul>
             </nav>
             <div class="search-bar">
-                <div class="search-bar__logo-container">
-                    <img
-                        src="/imagenes/3cea5f4612af4064a81e846a1df2afdb.png"
-                        alt="Logo Connecticus"
-                        class="logo-container__image"
-                    />
-                </div>
+                <div class="search-bar__logo-container"></div>
                 <form class="search-bar__form-container">
-                    <!-- <label class="search-bar__form-label" for="busqueda"
-                        ></label
-                    > -->
+                    <label
+                        class="search-bar__form-label"
+                        for="busqueda"
+                    ></label>
                     <input
                         class="search-bar__form-search"
                         id="busqueda"
@@ -141,14 +136,25 @@
                             required
                         />
                     </div>
-                    <div class="contact-form__container">
+                    <div
+                        class="contact-form__container"
+                        id="contact-form__phone"
+                    >
                         <i class="fas fa-mobile"></i>
                         <input
-                            class="contact-form__phone"
                             type="number"
-                            id="phone"
-                            name="phone"
-                            placeholder="Código de área y número"
+                            id="area-code"
+                            name="area-code"
+                            placeholder="Código de área"
+                            required
+                        />
+
+                        <input
+                            type="number"
+                            id="phone-number"
+                            name="phone-number"
+                            placeholder="Teléfono Celular"
+                            required
                         />
                     </div>
                     <div class="contact-form__container">
@@ -161,8 +167,43 @@
                             placeholder="Comentarios"
                         ></textarea>
                     </div>
+                    <div class="contact-form__container">
+                        <button type="submit" value="submit">Enviar</button>
+                    </div>
                 </form>
             </div>
         </main>
+        <footer>
+            <div class="footer__container">
+                <h1 class="footer__container-title">Support</h1>
+                <ul class="footer__support-list">
+                    <li class="footer__support-item">
+                        <a class="footer__support-link" href="#">Ayuda</a>
+                    </li>
+                    <li class="footer__support-item">
+                        <a class="footer__support-link" href="#"
+                            >Registración</a
+                        >
+                    </li>
+                    <li class="footer__support-item">
+                        <a class="footer__support-link" href="#">Garantía</a>
+                    </li>
+                    <li class="footer__support-item">
+                        <a class="footer__support-link" href="#"
+                            >Descuentos Exclusivos</a
+                        >
+                    </li>
+                    <li class="footer__support-item">
+                        <a class="footer__support-link" href="#">Newsletter</a>
+                    </li>
+                </ul>
+
+                <div class="footer-copyright">
+                    <p>
+                        Copyright © 2021 Connecticus inc. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
