@@ -5,8 +5,7 @@ footer {
     padding: 3em;
     display: flex;
     flex-direction: column;
-    
-    
+
     li {
         list-style: none;
         margin-top: 0.5em;
@@ -24,16 +23,17 @@ footer {
 .footer-sections {
     display: flex;
     flex-direction: row;
-    width:100%;
+    width: 100%;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
 }
+
+/* Para la resolución cuando se reduce */
 
 /* Las columnas del footer para que aparezcan una al lado del otra, separadas */
 .footer__column {
     display: flex;
     flex-direction: column;
-    
 }
 .footer__container-title {
     color: $highlight-color;
@@ -44,15 +44,11 @@ footer {
 .footer__social--media {
     display: flex;
     flex-direction: row;
-    
-    
 
     .fab {
         color: $highlight-color;
         font-size: 2em;
         margin-left: 1em;
-        
-        
     }
 }
 

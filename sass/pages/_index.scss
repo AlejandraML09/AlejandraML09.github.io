@@ -1,10 +1,5 @@
 @import "../themes/theme";
 
-body {
-    background-color: $background-color;
-    color: $light-text-color;
-}
-
 .section-cards {
     padding: 1em;
 }
@@ -71,4 +66,3 @@ body {
         gap: 2em;
     }
 }
-
