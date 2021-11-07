@@ -11,6 +11,11 @@
     }
 }
 
+/* Para el scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 20%;
+}
 main {
     min-height: 100vh;
 }

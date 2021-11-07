@@ -11,15 +11,17 @@
   box-sizing: border-box;
 }
 
+/* Para el scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 20%;
+}
+
 main {
   min-height: 100vh;
 }
 
 /* colorcitos */
-html {
-  scroll-behavior: smooth;
-}
-
 .card {
   outline: none;
   flex-grow: 1;
@@ -74,7 +76,8 @@ html {
   overflow: hidden;
   height: 400px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   background-size: contain;
@@ -84,7 +87,14 @@ html {
 }
 .card__heading h2 {
   padding: 0.5em;
-  align-self: flex-start;
+}
+.card__heading h3 {
+  align-self: center;
+  background-color: #007DFC;
+  width: 100%;
+  padding: 0.5em;
+  color: #FEFEFE;
+  margin-bottom: 1em;
 }
 
 /* Style the back side */
@@ -98,6 +108,13 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+}
+
+/* Para los títulos H1 */
+.card-category--container > h1 {
+  border-bottom: 2px #999 solid;
+  text-align: center;
+  margin-top: 0.5em;
 }
 
 @media (min-width: 1024) {
@@ -544,6 +561,10 @@ footer {
   display: flex;
   flex-direction: column;
 }
+footer li {
+  list-style: none;
+  margin-top: 0.5em;
+}
 footer:visited {
   color: #121212;
 }
@@ -552,13 +573,41 @@ footer a {
   color: #FEFEFE;
 }
 
-.footer-title {
+/* Contiene dentro de un div a todo el footer */
+.footer-sections {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Las columnas del footer para que aparezcan una al lado del otra, separadas */
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container-title {
   color: #007DFC;
   font-size: larger;
 }
 
+/* Los iconos del Footer */
+.footer__social--media {
+  display: flex;
+  flex-direction: row;
+}
+.footer__social--media .fab {
+  color: #007DFC;
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+/* El Copyright */
 .footer-copyright {
+  margin-top: 2em;
   border-top: 2px #121212 solid;
+  padding-top: 0.5em;
 }
 
 /* colorcitos */
@@ -620,7 +669,7 @@ footer a {
   max-width: 700px;
 }
 
-.contact__bigger-title {
+.contact__title {
   margin-bottom: 0.5em;
 }
 
@@ -639,4 +688,36 @@ footer a {
 }
 #contact-form__phone #phone-number {
   flex-grow: 1;
+}
+
+.contact__icons--title {
+  padding-top: 5em;
+}
+
+.contact__icons--container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+.contact__icons--container .fab {
+  margin-right: 0.5em;
+  color: #FEFEFE;
+  font-size: 3em;
+  color: #007DFC;
+}
+
+.contact__icons--social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.about-us {
+  background-image: url();
+}
+
+.hero-banner {
+  width: 100%;
+  height: 750px;
 }/*# sourceMappingURL=main.css.map */

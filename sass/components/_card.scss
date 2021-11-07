@@ -2,9 +2,7 @@
 $card-height: 400px;
 $card-width: 300px;
 
-html {
-    scroll-behavior: smooth;
-}
+
 .card {
     outline: none;
     flex-grow: 1;
@@ -56,7 +54,8 @@ html {
     overflow: hidden;
     height: $card-height;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     border-radius: 5px;
     background-size: contain;
@@ -66,7 +65,15 @@ html {
 
     h2 {
         padding: 0.5em;
-        align-self: flex-start;
+        
+    }
+    h3 {
+        align-self:center;
+        background-color: $highlight-color;
+        width:100%;
+        padding:0.5em;
+        color:$light-text-color;
+        margin-bottom: 1em;
     }
 }
 
@@ -81,6 +88,15 @@ html {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+}
+
+/* Para los títulos H1 */
+.card-category--container {
+    > h1 {
+        border-bottom: 2px $secondary-text-color solid;
+        text-align: center;
+        margin-top: 0.5em;
+    }
 }
 
 @media (min-width: 1024) {
@@ -109,6 +125,7 @@ html {
     justify-content: space-around;
     a {
         text-decoration: none;
+        
     }
     .banner__container:nth-of-type(2) {
         background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
@@ -121,6 +138,7 @@ html {
             ),
             url(/imagenes/yeti-x-hero-special-desktop.jpg);
     }
+    
 }
 
 .banner__container {

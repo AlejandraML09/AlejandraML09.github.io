@@ -59,28 +59,47 @@
     max-width: 700px;
 }
 
-.contact__bigger-title {
+.contact__title {
     margin-bottom: 0.5em;
-}
-.contact__product-text {
-    
-    
 }
 
 #contact-form__phone {
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     i {
-       font-size: 25px; 
-       margin-right: 0.5em;
+        font-size: 25px;
+        margin-right: 0.5em;
     }
     #area-code {
-        margin-right:1em;
+        margin-right: 1em;
         max-width: 160px;
     }
     #phone-number {
-        flex-grow:1;
+        flex-grow: 1;
     }
+}
+
+.contact__icons--title {
+    padding-top: 5em;
+}
+.contact__icons--container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+
+    .fab {
+        margin-right: 0.5em;
+        color: $light-text-color;
+        font-size: 3em;
+        color: $highlight-color;
+    }
+}
+
+.contact__icons--social-media {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin-top: 1.5em;
 }
