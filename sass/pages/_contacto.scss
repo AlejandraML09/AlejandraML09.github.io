@@ -34,7 +34,12 @@
             color: $light-text-color;
             font-size: 3em;
             color: $highlight-color;
+            
+            &:hover{
+                color:$light-text-color;
+            }
         }
+        
     }
 
     &__icons-social-media {

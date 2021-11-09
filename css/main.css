@@ -504,6 +504,9 @@ footer a {
   font-size: 2em;
   margin-left: 1em;
 }
+.footer-lists__social-media .fab:hover {
+  color: #fefefe;
+}
 
 /* El Copyright */
 .footer-copyright {
@@ -546,6 +549,9 @@ footer a {
   color: #fefefe;
   font-size: 3em;
   color: #007dfc;
+}
+.contact__icons-container .fab:hover {
+  color: #fefefe;
 }
 .contact__icons-social-media {
   display: flex;
