@@ -1,9 +1,4 @@
 @import "../themes/theme";
-body {
-    color: $light-text-color;
-    display: flex;
-    flex-direction: column;
-}
 
 .title {
     text-align: center;
@@ -25,8 +20,9 @@ body {
         rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
         rgba(0, 0, 0, 0.09) 0px 32px 16px;
     background-color: rgba($color: $background-color, $alpha: 0.4);
-    max-width:1000px;
-    margin:auto;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 2em;
 }
 
 .form-container {
