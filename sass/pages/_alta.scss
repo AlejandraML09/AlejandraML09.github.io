@@ -1,4 +1,4 @@
-.title {
+.form-title {
     text-align: center;
     padding-bottom: 1.5em;
     padding-top: 1em;
@@ -21,64 +21,62 @@
     max-width: 1000px;
     margin: auto;
     margin-bottom: 2em;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 0.5em;
-
-    input,
-    textarea,
-    option,
-    optgroup,
-    #shipping,
-    #id-container,
-    select {
+    /* Contenedor de los Formularios */
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
         padding: 0.5em;
-        border: 0;
-        border-radius: 0.3em;
-        font-family: inherit;
-        font-size: inherit;
-        color: $light-text-color;
-        background-color: $nav-bar-color;
-    }
 
-    label {
-        padding-bottom: 0.5em;
-    }
-    button {
-        background-color: $highlight-color;
-        border: none;
-        padding: 1em;
-        color: $light-text-color;
-        font-family: inherit;
-        font-size: inherit;
-        border-radius: 0.3em;
-
-        &:hover {
-            background-color: $highlight-color-hover;
+        input,
+        textarea,
+        option,
+        optgroup,
+        #shipping,
+        #id-container,
+        select {
+            padding: 0.5em;
+            border: 0;
+            border-radius: 0.3em;
+            font-family: inherit;
+            font-size: inherit;
+            color: $light-text-color;
+            background-color: $nav-bar-color;
+        }
+        label {
+            padding-bottom: 0.5em;
+        }
+        button {
+            background-color: $highlight-color;
+            border: none;
+            padding: 1em;
+            color: $light-text-color;
+            font-family: inherit;
+            font-size: inherit;
+            border-radius: 0.3em;
+            &:hover {
+                background-color: $highlight-color-hover;
+            }
         }
     }
-}
+    /* El checkbox para que aparezca como row */
+    &__container-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-.form-container-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    input {
-        margin-left: 1.5em;
+        input {
+            margin-left: 1.5em;
+        }
     }
-}
-
-.background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+    /* Video de Fondo */
+    &__background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
 }

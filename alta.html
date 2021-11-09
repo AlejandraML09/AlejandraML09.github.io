@@ -84,10 +84,10 @@
         </header>
         <main>
             <!-- FORMULARIOS -->
-            <h1 class="title">Alta de Productos</h1>
+            <h1 class="form-title">Alta de Productos</h1>
             <form action="">
                 <div class="form">
-                    <div class="form-container">
+                    <div class="form__container">
                         <label for="name">Nombre:*</label>
                         <input
                             type="text"
@@ -97,7 +97,7 @@
                             placeholder="Nombre"
                         />
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <label for="price">Precio:*</label>
                         <input
                             type="number"
@@ -107,7 +107,7 @@
                             placeholder="Precio"
                         />
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <label for="stock">Stock:</label>
                         <input
                             type="number"
@@ -118,7 +118,7 @@
                             value="1"
                         />
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <label>Marca:*</label>
                         <div>
                             <label tabindex="-1"
@@ -163,7 +163,7 @@
                             >
                         </div>
                     </div>
-                    <div class="form-container" id="#id-container">
+                    <div class="form__container" id="#id-container">
                         <label for="category">Categoría:</label>
                         <select id="category" name="category" required size="5">
                             <optgroup label="Teclados">
@@ -185,11 +185,11 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <label for="photo">Foto del Producto:*</label>
                         <input type="file" id="photo" name="photo" required />
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <label for="detalles">Detalles:</label>
                         <textarea
                             maxlength="50"
@@ -199,7 +199,7 @@
                             rows="5"
                         ></textarea>
                     </div>
-                    <div class="form-container-row">
+                    <div class="form__container-row">
                         <label class="free-shipping">Envio sin cargo:</label>
                         <input
                             type="checkbox"
@@ -208,12 +208,18 @@
                             value="shipping"
                         />
                     </div>
-                    <div class="form-container">
+                    <div class="form__container">
                         <button type="submit" value="submit">Enviar</button>
                     </div>
                 </div>
             </form>
-            <video class="background-video" autoplay muted loop id="myVideo">
+            <video
+                class="form__background-video"
+                autoplay
+                muted
+                loop
+                id="myVideo"
+            >
                 <source
                     src="imagenes/Razer Basilisk V3   Full Spectrum Customizability.mp4"
                     type="video/mp4"

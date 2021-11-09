@@ -380,7 +380,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.title {
+.form-title {
   text-align: center;
   padding-bottom: 1.5em;
   padding-top: 1em;
@@ -398,22 +398,24 @@ body {
   max-width: 1000px;
   margin: auto;
   margin-bottom: 2em;
+  /* Contenedor de los Formularios */
+  /* El checkbox para que aparezca como row */
+  /* Video de Fondo */
 }
-
-.form-container {
+.form__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   padding: 0.5em;
 }
-.form-container input,
-.form-container textarea,
-.form-container option,
-.form-container optgroup,
-.form-container #shipping,
-.form-container #id-container,
-.form-container select {
+.form__container input,
+.form__container textarea,
+.form__container option,
+.form__container optgroup,
+.form__container #shipping,
+.form__container #id-container,
+.form__container select {
   padding: 0.5em;
   border: 0;
   border-radius: 0.3em;
@@ -422,10 +424,10 @@ body {
   color: #fefefe;
   background-color: #2a2a2a;
 }
-.form-container label {
+.form__container label {
   padding-bottom: 0.5em;
 }
-.form-container button {
+.form__container button {
   background-color: #007dfc;
   border: none;
   padding: 1em;
@@ -434,20 +436,18 @@ body {
   font-size: inherit;
   border-radius: 0.3em;
 }
-.form-container button:hover {
+.form__container button:hover {
   background-color: #218efc;
 }
-
-.form-container-row {
+.form__container-row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.form-container-row input {
+.form__container-row input {
   margin-left: 1.5em;
 }
-
-.background-video {
+.form__background-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -522,7 +522,7 @@ footer a {
 .contact {
   display: flex;
   justify-content: space-around;
-  margin-top: 2em;
+  margin-top: 6em;
   padding: 2em;
   /* El Div que contiene el título, texto y los iconos de redes sociales */
 }
