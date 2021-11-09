@@ -3,6 +3,7 @@
     background-image: url(/imagenes/republicofgamers_asus.jpg);
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .contact {
@@ -13,7 +14,7 @@
     flex-wrap: wrap;
 
     /* El Div que contiene el título, texto y los iconos de redes sociales */
-    &_content {
+    &__content {
         flex: 2;
         max-width: 700px;
     }
@@ -21,11 +22,13 @@
     &__title {
         margin-bottom: 0.5em;
     }
-
-    &__icons-title {
-        padding-top: 5em;
+    &__product-text {
+        font-size: 1.2em;
+        margin-bottom: 2em;
     }
-    &__icons-container {
+
+    /* Contenedor del  Título y de los Iconos JUNTOS */
+    &__social-media {
         display: flex;
         flex-direction: column;
         padding-top: 1em;
@@ -33,7 +36,7 @@
         .fab {
             margin-right: 0.5em;
             color: $light-text-color;
-            font-size: 3em;
+            font-size: 3.5em;
             color: $highlight-color;
 
             &:hover {
@@ -41,12 +44,24 @@
             }
         }
     }
+    /* Título de Icons */
+    &__icons-title {
+        margin-bottom: 1em;
+    }
 
-    &__icons-social-media {
+    /* Contenedor SÓLO de TODOS los Iconos*/
+    &__icons-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__icon {
         display: flex;
         flex-direction: row;
+
         align-items: center;
         margin-top: 1.5em;
+        flex: 1 0 34%;
     }
 }
 

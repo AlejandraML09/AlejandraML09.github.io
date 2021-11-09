@@ -520,6 +520,7 @@ footer a {
   background-image: url(/imagenes/republicofgamers_asus.jpg);
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .contact {
@@ -529,36 +530,48 @@ footer a {
   padding: 2em;
   flex-wrap: wrap;
   /* El Div que contiene el título, texto y los iconos de redes sociales */
+  /* Contenedor del  Título y de los Iconos JUNTOS */
+  /* Título de Icons */
+  /* Contenedor SÓLO de TODOS los Iconos*/
 }
-.contact_content {
+.contact__content {
   flex: 2;
   max-width: 700px;
 }
 .contact__title {
   margin-bottom: 0.5em;
 }
-.contact__icons-title {
-  padding-top: 5em;
+.contact__product-text {
+  font-size: 1.2em;
+  margin-bottom: 2em;
 }
-.contact__icons-container {
+.contact__social-media {
   display: flex;
   flex-direction: column;
   padding-top: 1em;
 }
-.contact__icons-container .fab {
+.contact__social-media .fab {
   margin-right: 0.5em;
   color: #fefefe;
-  font-size: 3em;
+  font-size: 3.5em;
   color: #007dfc;
 }
-.contact__icons-container .fab:hover {
+.contact__social-media .fab:hover {
   color: #fefefe;
 }
-.contact__icons-social-media {
+.contact__icons-title {
+  margin-bottom: 1em;
+}
+.contact__icons-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact__icon {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 1.5em;
+  flex: 1 0 34%;
 }
 
 /* El Formulario en sí, con todos sus cambios, separados del texto con redes sociales */
