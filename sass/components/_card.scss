@@ -1,7 +1,3 @@
-@import "../themes/theme";
-$card-height: 400px;
-$card-width: 300px;
-
 .card {
     outline: none;
     flex-grow: 1;
@@ -10,109 +6,85 @@ $card-width: 300px;
     height: $card-height;
     box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
     border-radius: 5px 5px 0 0;
+
+    /* This container is needed to position the front and back side */
+    &__content {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    &__flip {
+        background-color: transparent;
+        width: $card-width;
+        height: $card-height;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    &__flip:hover &__content {
+        transform: rotateY(180deg);
+    }
+    /* Position the front and back side */
+    &__heading,
+    &__description {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+    /* Style the front side (fallback if image is missing) */
+    &__heading {
+        color: black;
+        overflow: hidden;
+        height: $card-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+
+        h2 {
+            padding: 0.5em;
+        }
+        h3 {
+            align-self: center;
+            background-color: $highlight-color;
+            width: 100%;
+            padding: 0.5em;
+            color: $light-text-color;
+            margin-bottom: 1em;
+        }
+    }
+    /* Style the back side */
+    &__description {
+        padding: 1em;
+        background-color: $nav-bar-color;
+        color: white;
+        transform: rotateY(180deg);
+        height: $card-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
 }
 
 .card-image {
     display: none;
 }
-/* This container is needed to position the front and back side */
-.card__content {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.card__flip {
-    background-color: transparent;
-    width: $card-width;
-    height: $card-height;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.card__flip:hover .card__content {
-    transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.card__heading,
-.card__description {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.card__heading {
-    color: black;
-    overflow: hidden;
-    height: $card-height;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-
-    h2 {
-        padding: 0.5em;
-    }
-    h3 {
-        align-self: center;
-        background-color: $highlight-color;
-        width: 100%;
-        padding: 0.5em;
-        color: $light-text-color;
-        margin-bottom: 1em;
-    }
-}
-
-/* Style the back side */
-.card__description {
-    padding: 1em;
-    background-color: $nav-bar-color;
-    color: white;
-    transform: rotateY(180deg);
-    height: $card-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
 
 /* Para los títulos H1 */
-.card-category--container {
+.card-category-container {
     > h1 {
         border-bottom: 2px $secondary-text-color solid;
         text-align: center;
         margin-top: 0.5em;
     }
 }
-
-/* Resolución */
-
-// @media (min-width: 1024) {
-//     .card {
-//         min-width: 240px;
-//     }
-// }
-
-// @media (min-width: 426px) and (max-width: 768px) {
-//     .card {
-//         min-width: 400px;
-//         max-width: 500px;
-//         height: 200px;
-//     }
-
-//     .card__article {
-//         display: flex;
-//     }
-// }

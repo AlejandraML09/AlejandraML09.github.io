@@ -1,3 +1,5 @@
+@import "abstracts/variables";
+
 @import "base/reset";
 
 @import "components/card";
@@ -5,8 +7,6 @@
 @import "layout/header";
 
 @import "pages/index";
-
-@import "themes/theme";
 
 @import "base/typography";
 
@@ -19,5 +19,3 @@
 @import "pages/nosotros";
 
 @import "layout/banner";
-
-@import "abstracts/variables";
