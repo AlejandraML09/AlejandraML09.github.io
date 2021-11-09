@@ -512,32 +512,31 @@ footer a {
 }
 
 /* Contiene dentro de un div a todo el footer */
-.footer-sections {
+.footer-lists {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  /* Las columnas del footer para que aparezcan una al lado del otra, separadas */
+  /* Los iconos del Footer */
 }
-
-/* Para la resolución cuando se reduce */
-/* Las columnas del footer para que aparezcan una al lado del otra, separadas */
-.footer__column {
+.footer-lists__column {
   display: flex;
   flex-direction: column;
 }
-
-.footer__container-title {
+.footer-lists__column-title {
   color: #007DFC;
   font-size: larger;
 }
-
-/* Los iconos del Footer */
-.footer__social--media {
+.footer-lists__column-list {
+  margin-bottom: 2em;
+}
+.footer-lists__social-media {
   display: flex;
   flex-direction: row;
 }
-.footer__social--media .fab {
+.footer-lists__social-media .fab {
   color: #007DFC;
   font-size: 2em;
   margin-left: 1em;
@@ -548,10 +547,6 @@ footer a {
   margin-top: 2em;
   border-top: 2px #121212 solid;
   padding-top: 0.5em;
-}
-
-.footer__cyber-monday-list {
-  margin-bottom: 2em;
 }
 
 /* colorcitos */
