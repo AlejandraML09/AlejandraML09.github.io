@@ -1,66 +1,94 @@
+/* Clase para el Body con la imagen de fondo */
 .contact-page-content {
     background-image: url(/imagenes/republicofgamers_asus.jpg);
     background-position: center;
     background-attachment: fixed;
 }
 
+.contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    padding: 2em;
+
+    /* El Div que contiene el título, texto y los iconos de redes sociales */
+    &_content {
+        flex: 2;
+        max-width: 700px;
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    &__icons-title {
+        padding-top: 5em;
+    }
+    &__icons-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+
+        .fab {
+            margin-right: 0.5em;
+            color: $light-text-color;
+            font-size: 3em;
+            color: $highlight-color;
+        }
+    }
+
+    &__icons-social-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1.5em;
+    }
+}
+
+/* El Formulario en sí, con todos sus cambios, separados del texto con redes sociales */
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     flex: 1;
     max-width: 750px;
-}
 
-.contact-form__container {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    input,
-    textarea,
-    option,
-    optgroup,
-    select {
+    &__container {
         padding: 0.5em;
-        border: 0;
-        border-radius: 0.3em;
-        font-family: inherit;
-        font-size: inherit;
-        color: $light-text-color;
-        background-color: $nav-bar-color;
-    }
-    button {
-        background-color: $highlight-color;
-        border: none;
-        padding: 1em;
-        color: $light-text-color;
-        font-family: inherit;
-        font-size: inherit;
-        border-radius: 0.3em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
-        &:hover {
-            background-color: $highlight-color-hover;
+        input,
+        textarea,
+        option,
+        optgroup,
+        select {
+            padding: 0.5em;
+            border: 0;
+            border-radius: 0.3em;
+            font-family: inherit;
+            font-size: inherit;
+            color: $light-text-color;
+            background-color: $nav-bar-color;
+        }
+        button {
+            background-color: $highlight-color;
+            border: none;
+            padding: 1em;
+            color: $light-text-color;
+            font-family: inherit;
+            font-size: inherit;
+            border-radius: 0.3em;
+
+            &:hover {
+                background-color: $highlight-color-hover;
+            }
         }
     }
 }
 
-.main-contact {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2em;
-    padding: 2em;
-}
-.contact__content {
-    flex: 2;
-    max-width: 700px;
-}
-
-.contact__title {
-    margin-bottom: 0.5em;
-}
-
+/* Un ID separado para dejar 2 inputs en la misma línea siendo uno más chico que el otro */
 #contact-form__phone {
     display: flex;
     flex-direction: row;
@@ -77,27 +105,4 @@
     #phone-number {
         flex-grow: 1;
     }
-}
-
-.contact__icons--title {
-    padding-top: 5em;
-}
-.contact__icons--container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-
-    .fab {
-        margin-right: 0.5em;
-        color: $light-text-color;
-        font-size: 3em;
-        color: $highlight-color;
-    }
-}
-
-.contact__icons--social-media {
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    margin-top: 1.5em;
 }

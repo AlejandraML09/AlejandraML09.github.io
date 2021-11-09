@@ -512,12 +512,49 @@ footer a {
   padding-top: 0.5em;
 }
 
+/* Clase para el Body con la imagen de fondo */
 .contact-page-content {
   background-image: url(/imagenes/republicofgamers_asus.jpg);
   background-position: center;
   background-attachment: fixed;
 }
 
+.contact {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  padding: 2em;
+  /* El Div que contiene el título, texto y los iconos de redes sociales */
+}
+.contact_content {
+  flex: 2;
+  max-width: 700px;
+}
+.contact__title {
+  margin-bottom: 0.5em;
+}
+.contact__icons-title {
+  padding-top: 5em;
+}
+.contact__icons-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+.contact__icons-container .fab {
+  margin-right: 0.5em;
+  color: #fefefe;
+  font-size: 3em;
+  color: #007dfc;
+}
+.contact__icons-social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+/* El Formulario en sí, con todos sus cambios, separados del texto con redes sociales */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -525,7 +562,6 @@ footer a {
   flex: 1;
   max-width: 750px;
 }
-
 .contact-form__container {
   padding: 0.5em;
   display: flex;
@@ -558,22 +594,7 @@ footer a {
   background-color: #218efc;
 }
 
-.main-contact {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-  padding: 2em;
-}
-
-.contact__content {
-  flex: 2;
-  max-width: 700px;
-}
-
-.contact__title {
-  margin-bottom: 0.5em;
-}
-
+/* Un ID separado para dejar 2 inputs en la misma línea siendo uno más chico que el otro */
 #contact-form__phone {
   display: flex;
   flex-direction: row;
@@ -589,29 +610,6 @@ footer a {
 }
 #contact-form__phone #phone-number {
   flex-grow: 1;
-}
-
-.contact__icons--title {
-  padding-top: 5em;
-}
-
-.contact__icons--container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1em;
-}
-.contact__icons--container .fab {
-  margin-right: 0.5em;
-  color: #fefefe;
-  font-size: 3em;
-  color: #007dfc;
-}
-
-.contact__icons--social-media {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 1.5em;
 }
 
 .about-us-hero {
