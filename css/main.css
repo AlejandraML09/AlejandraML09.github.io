@@ -158,15 +158,19 @@ main {
 .nav-bar {
   display: flex;
   align-items: center;
+  /* Contiene el ul */
+  /* Hover para la línea de abajo */
+  /* Esto es el li */
+  /* Link de cada uno */
 }
-
-/* Contiene el ul */
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
 }
-
-/* Esto es el li */
+.nav-bar__nav-list li:hover {
+  border-bottom: 5px solid #007DFC;
+  transition: all ease 0.3s;
+}
 .nav-bar__nav-item {
   text-align: center;
   border: 5px solid transparent;
@@ -175,20 +179,12 @@ main {
   border-bottom: 5px solid #007DFC;
   transition: all ease 0.3s;
 }
-
-/* Link de cada uno */
 .nav-bar__nav-link {
   display: block;
   background-color: #2A2A2A;
   color: #FEFEFE;
   padding: 0.7em 2em;
   text-decoration: none;
-}
-
-/* Hover para la línea de abajo */
-.nav-bar__nav-list li:hover {
-  border-bottom: 5px solid #007DFC;
-  transition: all ease 0.3s;
 }
 
 /************************
@@ -198,17 +194,19 @@ main {
   display: flex;
   background-color: #2A2A2A;
   align-items: center;
+  /* Contenedor de la Barra de búsqueda */
+  /* LOGO */
+  /* El "Buscar" */
+  /* El form para buscar -> Input */
+  /* Botón de buscar con el Magnifying glass */
 }
-
 .search-bar__form-container {
+  background-color: #2A2A2A;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: nowrap;
   padding: 1em;
 }
-
-#search-bar__button {
-  display: none;
-}
-
-/* LOGO */
 .search-bar__logo-container {
   color: white;
   display: flex;
@@ -216,26 +214,13 @@ main {
   width: 270px;
   padding: 1em;
 }
-
-.logo-container__image {
+.search-bar__logo-container__image {
   height: 35px;
 }
-
-/* Contenedor de la Barra de búsqueda */
-.search-bar__form-container {
-  background-color: #2A2A2A;
-  flex-basis: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-/* El "Buscar" */
 .search-bar__form-label {
   background-color: #2A2A2A;
   margin-right: 0.5em;
 }
-
-/* El form para buscar -> Input */
 .search-bar__form-search {
   color: #FEFEFE;
   border-bottom: 1px solid #007DFC;
@@ -262,13 +247,20 @@ main {
   color: #999;
   font-size: 1.2em;
 }
-
-/* Botón de buscar con el Magnifying glass */
 .search-bar__form-submit {
   margin-left: 0.5em;
 }
 .search-bar__form-submit:visited {
   color: #121212;
+}
+.search-bar__carrito-container {
+  flex-grow: 0 0 3em;
+  background-color: #2A2A2A;
+  padding-right: 1.6em;
+}
+
+#search-bar__button {
+  display: none;
 }
 
 /* Icono para buscar directamente */
@@ -276,12 +268,6 @@ main {
   margin-left: 0.5em;
   margin: auto;
   color: #FEFEFE;
-}
-
-.search-bar__carrito-container {
-  flex-grow: 0 0 3em;
-  background-color: #2A2A2A;
-  padding-right: 1.6em;
 }
 
 /*********************************
@@ -294,16 +280,10 @@ main {
   position: relative;
   cursor: pointer;
 }
-
 .menu-toggle__label {
   display: block;
-  /* width: 100%; --
-  height: 100%; */
 }
-
-.menu-toggle__top-bread,
-.menu-toggle__meat,
-.menu-toggle__bottom-bread {
+.menu-toggle__top-bread, .menu-toggle__meat, .menu-toggle__bottom-bread {
   display: block;
   background-color: #FEFEFE;
   height: 0.2em;
@@ -311,16 +291,13 @@ main {
   left: 0.5em;
   right: 0.5em;
 }
-
 .menu-toggle__top-bread {
   top: 0.8em;
 }
-
 .menu-toggle__meat {
   top: 50%;
   margin-top: -0.1em;
 }
-
 .menu-toggle__bottom-bread {
   bottom: 0.8em;
 }
