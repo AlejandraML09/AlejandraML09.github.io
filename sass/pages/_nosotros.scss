@@ -32,13 +32,15 @@
         justify-content: space-around;
         margin-top: 2em;
         padding: 2em;
+        flex-wrap: wrap;
+        
     }
     &__content-left {
         display: flex;
         flex-direction: column;
-        margin-right: 2em;
         inline-size: 500px;
         overflow-wrap: break-word;
+        margin-bottom: 4em;
     }
     &__content-right {
         display: flex;
