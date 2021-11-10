@@ -311,14 +311,19 @@ Es para los cambios según RESOLUCIÓN.
 }
 
 /* Para los títulos H1 */
-.card-category-container > h1 {
+.card-category-container > h2 {
   border-bottom: 2px #999 solid;
   text-align: center;
   margin-top: 0.5em;
+  font-size: 2em;
 }
 
 .section-cards {
   padding: 1em;
+}
+.section-cards__title {
+  font-size: 2em;
+  padding-top: 1em;
 }
 
 .cards-container {

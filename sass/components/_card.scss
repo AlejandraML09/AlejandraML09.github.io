@@ -82,9 +82,10 @@
 
 /* Para los títulos H1 */
 .card-category-container {
-    > h1 {
+    > h2 {
         border-bottom: 2px $secondary-text-color solid;
         text-align: center;
         margin-top: 0.5em;
+        font-size: 2em;
     }
 }

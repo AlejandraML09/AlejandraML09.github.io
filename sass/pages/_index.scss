@@ -1,5 +1,10 @@
 .section-cards {
     padding: 1em;
+
+    &__title {
+        font-size: 2em;
+        padding-top: 1em;
+    }
 }
 
 .cards-container {
