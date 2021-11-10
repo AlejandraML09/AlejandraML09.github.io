@@ -624,6 +624,7 @@ footer a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 #contact-form__phone i {
   font-size: 25px;
@@ -631,10 +632,13 @@ footer a {
 }
 #contact-form__phone #area-code {
   margin-right: 1em;
-  max-width: 160px;
+  max-width: 70px;
+  margin-bottom: 0.7em;
 }
 #contact-form__phone #phone-number {
   flex-grow: 1;
+  margin-bottom: 0.7em;
+  max-width: 215px;
 }
 
 .about-us-hero {

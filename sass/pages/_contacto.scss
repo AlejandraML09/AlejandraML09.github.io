@@ -113,16 +113,22 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    
 
     i {
         font-size: 25px;
         margin-right: 0.5em;
+        
     }
     #area-code {
         margin-right: 1em;
-        max-width: 160px;
+        max-width: 70px;
+        margin-bottom: 0.7em;
     }
     #phone-number {
         flex-grow: 1;
+        margin-bottom: 0.7em;
+        max-width: 215px;
     }
 }
