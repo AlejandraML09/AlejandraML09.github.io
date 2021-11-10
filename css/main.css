@@ -530,7 +530,6 @@ footer a {
 
 .contact {
   display: flex;
-  justify-content: space-around;
   margin-top: 6em;
   padding: 2em;
   flex-wrap: wrap;
@@ -554,6 +553,7 @@ footer a {
   display: flex;
   flex-direction: column;
   padding-top: 1em;
+  justify-self: flex-start;
 }
 .contact__social-media .fab {
   margin-right: 0.5em;
@@ -584,6 +584,8 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-self: flex-end;
+  align-self: stretch;
   flex: 1;
   max-width: 750px;
 }

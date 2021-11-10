@@ -77,7 +77,8 @@
         </header>
         <main>
             <div class="contact">
-                <div class="contact__content">
+                <!-- <div class="contact__content"> -->
+                <div class="contact__text-container">
                     <h1 class="contact__title">
                         Conocé más sobre nuestros productos:
                     </h1>
@@ -85,6 +86,7 @@
                         Completá el formulario y recibirás inmediatamente los
                         mejores descuentos para tu headset, teclado o microfono!
                     </p>
+<<<<<<< Updated upstream
                     <form class="contact-form" action="#">
                         <div class="contact-form__container">
                             <select name="product" id="product" required>
@@ -193,6 +195,114 @@
                         </div>
                     </div>
                 </div>
+=======
+                </div>
+                <form class="contact-form" action="">
+                    <div class="contact-form__container">
+                        <select name="product" id="product" required>
+                            <option value="">Elegí tu Producto</option>
+                            <option value="1">Teclados</option>
+                            <option value="2">Headsets</option>
+                            <option value="3">Microfonos</option>
+                            <option value="4">Otra</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__container">
+                        <select name="brand" id="brand" required>
+                            <option value="">Elegí tu Marca</option>
+                            <option value="5">HyperX</option>
+                            <option value="6">Redragon</option>
+                            <option value="7">Razer</option>
+                            <option value="8">Logitech</option>
+                            <option value="9">Otra</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Nombre"
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="text"
+                            id="lname"
+                            name="lname"
+                            required
+                            placeholder="Apellido"
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div
+                        class="contact-form__container"
+                        id="contact-form__phone"
+                    >
+                        <i class="fas fa-mobile"></i>
+                        <input
+                            type="number"
+                            id="area-code"
+                            name="area-code"
+                            placeholder="Código de área"
+                            required
+                        />
+
+                        <input
+                            type="number"
+                            id="phone-number"
+                            name="phone-number"
+                            placeholder="Teléfono Celular"
+                            required
+                        />
+                    </div>
+                    <div class="contact-form__container">
+                        <textarea
+                            maxlength="50"
+                            name="comments"
+                            id="comments"
+                            cols="30"
+                            rows="5"
+                            placeholder="Comentarios"
+                        ></textarea>
+                    </div>
+                    <div class="contact-form__container">
+                        <button type="submit" value="submit">Enviar</button>
+                    </div>
+                </form>
+                <div class="contact__icons-container">
+                    <h2 class="contact__icons-title">
+                        También podes contactarnos a través de nuestras Redes
+                        Sociales:
+                    </h2>
+                    <div class="contact__icons-social-media">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>(+54)1589-6342</p>
+                    </div>
+                    <div class="contact__icons-social-media">
+                        <i class="fab fa-twitter"></i>
+                        <p>@connectic_us</p>
+                    </div>
+                    <div class="contact__icons-social-media">
+                        <i class="fab fa-facebook"></i>
+                        <p>/connectic_us</p>
+                    </div>
+                    <div class="contact__icons-social-media">
+                        <i class="fab fa-instagram"></i>
+                        <p>@connectic_us</p>
+                    </div>
+                </div>
+                <!-- </div> -->
+>>>>>>> Stashed changes
             </div>
         </main>
         <footer>
