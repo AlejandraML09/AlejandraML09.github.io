@@ -17,50 +17,50 @@
 
     /* Teclados */
     .card:nth-of-type(1) .card__heading {
-        background-image: url(/imagenes/teclado-logitech.jpg);
+        background-image: url("../imagenes/teclado-logitech.jpg");
     }
     .card:nth-of-type(2) .card__heading {
-        background-image: url(/imagenes/Teclado-gamer-HyperX.jpg);
+        background-image: url("../imagenes/Teclado-gamer-HyperX.jpg");
     }
 
     .card:nth-of-type(3) .card__heading {
-        background-image: url(/imagenes/teclado-razer.jpg);
+        background-image: url("../imagenes/teclado-razer.jpg");
     }
 
     .card:nth-of-type(4) .card__heading {
-        background-image: url(/imagenes/redragon-teclado.jpg);
+        background-image: url("../imagenes/redragon-teclado.jpg");
     }
 }
 
 /* Microfonos */
 #microphones__container {
     .card:nth-of-type(1) .card__heading {
-        background-image: url(/imagenes/microfono-razer_.jpg);
+        background-image: url("../imagenes/microfono-razer_.jpg");
     }
     .card:nth-of-type(2) .card__heading {
-        background-image: url(/imagenes/microfono_hyperX.jpg);
+        background-image: url("../imagenes/microfono_hyperX.jpg");
     }
     .card:nth-of-type(3) .card__heading {
-        background-image: url(/imagenes/microfono_yeti.png);
+        background-image: url("../imagenes/microfono_yeti.png");
     }
     .card:nth-of-type(4) .card__heading {
-        background-image: url(/imagenes/microfono_snowball.jpg);
+        background-image: url("../imagenes/microfono_snowball.jpg");
     }
 }
 
 /*Headsets */
 #headsets__container {
     .card:nth-of-type(1) .card__heading {
-        background-image: url(/imagenes/headset_hyperX.jpg);
+        background-image: url("../imagenes/headset_hyperX.jpg");
     }
     .card:nth-of-type(2) .card__heading {
-        background-image: url(/imagenes/headset_logitech.png);
+        background-image: url("../imagenes/headset_logitech.png");
     }
     .card:nth-of-type(3) .card__heading {
-        background-image: url(/imagenes/headset_razer.png);
+        background-image: url("../imagenes/headset_razer.png");
     }
     .card:nth-of-type(4) .card__heading {
-        background-image: url(/imagenes/headset_redragon.png);
+        background-image: url("../imagenes/headset_redragon.png");
     }
 }
 

@@ -112,7 +112,7 @@ main {
 .search-bar__logo-container {
   color: white;
   display: flex;
-  background-image: url(/imagenes/3cea5f4612af4064a81e846a1df2afdb.png);
+  background-image: url("../imagenes/3cea5f4612af4064a81e846a1df2afdb.png");
   width: 270px;
   padding: 1em;
 }
@@ -341,44 +341,44 @@ Es para los cambios según RESOLUCIÓN.
   /* Teclados */
 }
 .cards-container .card:nth-of-type(1) .card__heading {
-  background-image: url(/imagenes/teclado-logitech.jpg);
+  background-image: url("../imagenes/teclado-logitech.jpg");
 }
 .cards-container .card:nth-of-type(2) .card__heading {
-  background-image: url(/imagenes/Teclado-gamer-HyperX.jpg);
+  background-image: url("../imagenes/Teclado-gamer-HyperX.jpg");
 }
 .cards-container .card:nth-of-type(3) .card__heading {
-  background-image: url(/imagenes/teclado-razer.jpg);
+  background-image: url("../imagenes/teclado-razer.jpg");
 }
 .cards-container .card:nth-of-type(4) .card__heading {
-  background-image: url(/imagenes/redragon-teclado.jpg);
+  background-image: url("../imagenes/redragon-teclado.jpg");
 }
 
 /* Microfonos */
 #microphones__container .card:nth-of-type(1) .card__heading {
-  background-image: url(/imagenes/microfono-razer_.jpg);
+  background-image: url("../imagenes/microfono-razer_.jpg");
 }
 #microphones__container .card:nth-of-type(2) .card__heading {
-  background-image: url(/imagenes/microfono_hyperX.jpg);
+  background-image: url("../imagenes/microfono_hyperX.jpg");
 }
 #microphones__container .card:nth-of-type(3) .card__heading {
-  background-image: url(/imagenes/microfono_yeti.png);
+  background-image: url("../imagenes/microfono_yeti.png");
 }
 #microphones__container .card:nth-of-type(4) .card__heading {
-  background-image: url(/imagenes/microfono_snowball.jpg);
+  background-image: url("../imagenes/microfono_snowball.jpg");
 }
 
 /*Headsets */
 #headsets__container .card:nth-of-type(1) .card__heading {
-  background-image: url(/imagenes/headset_hyperX.jpg);
+  background-image: url("../imagenes/headset_hyperX.jpg");
 }
 #headsets__container .card:nth-of-type(2) .card__heading {
-  background-image: url(/imagenes/headset_logitech.png);
+  background-image: url("../imagenes/headset_logitech.png");
 }
 #headsets__container .card:nth-of-type(3) .card__heading {
-  background-image: url(/imagenes/headset_razer.png);
+  background-image: url("../imagenes/headset_razer.png");
 }
 #headsets__container .card:nth-of-type(4) .card__heading {
-  background-image: url(/imagenes/headset_redragon.png);
+  background-image: url("../imagenes/headset_redragon.png");
 }
 
 @media (min-width: 1200px) {
@@ -527,7 +527,7 @@ footer a {
 
 /* Clase para el Body con la imagen de fondo */
 .contact-page-content {
-  background-image: url(/imagenes/republicofgamers_asus.jpg);
+  background-image: url("../imagenes/republicofgamers_asus.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -846,7 +846,7 @@ footer a {
 
 .hero-banner {
   width: 100%;
-  background-image: url(/imagenes/discounts.png);
+  background-image: url("../imagenes/discounts.png");
   padding-bottom: 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -870,7 +870,7 @@ footer a {
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
-  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url(/imagenes/hx-hero-headset-alpha-lg.jpg);
+  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url("../imagenes/hx-hero-headset-alpha-lg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -878,10 +878,10 @@ footer a {
   align-items: center;
 }
 .banner__container:nth-of-type(2) {
-  background-image: url(/imagenes/WowChakraBlackWidowV3Pro.jpg);
+  background-image: url("../imagenes/WowChakraBlackWidowV3Pro.jpg");
 }
 .banner__container:nth-of-type(3) {
-  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url(/imagenes/yeti-x-hero-special-desktop.jpg);
+  background-image: linear-gradient(to left, rgba(39, 52, 126, 0.3), rgba(0, 0, 0, 0.7)), url("../imagenes/yeti-x-hero-special-desktop.jpg");
 }
 .banner__container:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
