@@ -34,11 +34,16 @@ class Card {
                             </article>
                         </a>
 `
-       
     }
 }
 
 
+var card1 = new Card("teclado-logitech.jpg", "Logitech Series G Prodigy G213", "Teclado Gamer Logitech Serie G Prodigy G213 QWERTY.Lenguaje español.Color Negro con luz RGB.", "$7.028");
+
+var card2 = new Card("Teclado-gamer-HyperX.jpg", "HyperX Alloy Core", "Teclado gamer HyperX Alloy Core RGB QWERTY.Lenguaje español                latinoamérica.Color negro con luz RGB.", "$13.712");
+
+var card3 = new Card("teclado-razer.jpg", "Razer Huntsman Tournament Edition", "Teclado Gamer Razer Huntsman Tournament Edition Qwerty Linear Optical. Lenguaje Inglés US. Color Negro con Luz Rgb.", "$16.000");
+
+var card4 = new Card("redragon-teclado.jpg", "Redragon Magic Wand Pro", " Teclado Gamer Redragon Magic Wand Pro K587 - PRO QWERTY Redragon Opto - Mecánico.Lenguaje español latinoamérica.Color negro con luz RGB.", "$8.499");
 
 
-var card1 = new Card("chromcast.jpg", "Logitech Series G Prodigy G213")
