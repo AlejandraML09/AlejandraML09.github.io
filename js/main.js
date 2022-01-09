@@ -1,49 +1,49 @@
-class Card {
-    constructor(image, heading, description, price) {
-        this.image = image;
-        this.heading = heading;
-        this.description = description;
-        this.price = price;
-    }
-    getCardHTML() {
-        return `
-            <a href="#" class="card">
-                            <article class="card__article">
-                                <div class="card__flip">
-                                    <div class="card__image-container">
-                                        <img
-                                            src="imagenes/${this.image}"
-                                            alt="Chromecast"
-                                            class="card__image"
-                                        />
-                                    </div>
-                                    <div class="card__content">
-                                        <div class="card__heading">
-                                            <h2>
-                                                ${this.heading}
-                                              </h2>
-                                            <h3>${this.price}</h3>
-                                        </div>
-                                        <div class="card__description">
-                                            <p>
-                                           ${this.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-`
-    }
+//Funcion para simplificar los llamados HTTP.
+// Con esto obtengo el HTML que yo quiera, así cuando la página carga veo el contenido del HTML.
+// si hacemos ajax('plantillas/alta.html') va a enviar un request de tipo GET, que va a intentar conseguir el archivo 'plantillas/alta.html'
+// si hacemos ajax('plantillas/alta.html', 'post') va a enviar un request de tipo POST, hacia la URL donde está 'plantillas/alta.html'
+function ajax(url, metodo) {
+    let xhr = new XMLHttpRequest
+    xhr.open(metodo || 'get', url)
+    xhr.send()
+
+    return xhr
+}
+
+// Dado un id, obtiene un archivo.
+// Por ejemplo, si le pedimos el archivo del id 'alta', nos va a devolver 'plantillas/alta.html'
+function getNombreArchivo(id) {
+    return 'plantillas/' + id + '.html'
 }
 
 
-var card1 = new Card("teclado-logitech.jpg", "Logitech Series G Prodigy G213", "Teclado Gamer Logitech Serie G Prodigy G213 QWERTY.Lenguaje español.Color Negro con luz RGB.", "$7.028");
+/**
+ * Dado un id de página, pone en el elemento main el contenido de esa plantilla.
+ * Por ejemplo, si hacemos cargarPlantilla('nosotros'), en el main se va a ver el contenido de nosotros.html
+ * 
+ */
+function cargarPlantilla(id) {
+    let main = document.querySelector('main')
+    let archivo = getNombreArchivo(id)
+    let xhr = ajax(archivo)
+    xhr.addEventListener('load', () => {
+        if (xhr.status = 200) {
 
-var card2 = new Card("Teclado-gamer-HyperX.jpg", "HyperX Alloy Core", "Teclado gamer HyperX Alloy Core RGB QWERTY.Lenguaje español                latinoamérica.Color negro con luz RGB.", "$13.712");
+            //Cargo el HTML de la plantilla elegida
+            main.innerHTML = xhr.response
+            //Cargo el JS de la plantilla elegida -> Acá se inicializan las cosas (como cards)
+            initJS(id)
+        }
+    })
+}
 
-var card3 = new Card("teclado-razer.jpg", "Razer Huntsman Tournament Edition", "Teclado Gamer Razer Huntsman Tournament Edition Qwerty Linear Optical. Lenguaje Inglés US. Color Negro con Luz Rgb.", "$16.000");
-
-var card4 = new Card("redragon-teclado.jpg", "Redragon Magic Wand Pro", " Teclado Gamer Redragon Magic Wand Pro K587 - PRO QWERTY Redragon Opto - Mecánico.Lenguaje español latinoamérica.Color negro con luz RGB.", "$8.499");
+/* Función que dado un id corre la función de incialización correspondiente 
+Ej = Si yo corro initJS("inicio"), se va a correr la función de incialización de inicio.js
+*/
+function initJS(id) {
+    if (id == "inicio") {
+        initInicio();
+    }
+}
 
 
