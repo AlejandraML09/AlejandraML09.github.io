@@ -7,7 +7,9 @@ var keyboardCard4 = new Card("redragon-teclado.jpg", "Redragon Magic Wand Pro", 
 
 arrayKeyboards = [keyboardCard1, keyboardCard2, keyboardCard3, keyboardCard4];
 
-var microphoneCard1 = new Card("pepe.jpg", "Razer Seiren Mini", "Micrófono Razer Seiren Mini condensador supercardioide rosa cuarzo.", "$8.899");
+var microphoneCard1 = new Card("microfono_razer.jpg", "Razer Seiren Mini", "Microfóno Razer Seiren Mini condensador supercardioide rosa cuarzo.", "$8.899");
+
+
 var microphoneCard2 = new Card("microfono_hyperX.jpg", "HyperX QuadCast", "Micrófono HyperX QuadCast condensador multipatrón negro.", "$13.450");
 var microphoneCard3 = new Card("microfono_yeti.png", "Blue Yeti X Profesional", "Blue Yeti X, micrófono condensador USB profesional con indicadores de alta resolución, iluminación LED y efectos Blue VOICE para gaming, streaming y podcasting en PC / Mac.", "$15.530");
 var microphoneCard4 = new Card("microfono_snowball.jpg", "Blue Snowball Ice", "Recomendado para computadora, grabaciones, streaming,instrumentos, voces, podcast. Formato: de mesa. Conectores de salida: usb.", "$7.499");
