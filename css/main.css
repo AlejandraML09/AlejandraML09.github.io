@@ -419,6 +419,15 @@ body {
   align-content: center;
   padding: 0.5em;
 }
+.form__container .form-error {
+  background-color: #ffcccc;
+  color: #990000;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  display: none;
+}
 .form__container input,
 .form__container textarea,
 .form__container option,
@@ -449,6 +458,9 @@ body {
 .form__container button:hover {
   background-color: #218efc;
 }
+.form__container button:disabled {
+  background-color: gray;
+}
 .form__container-row {
   display: flex;
   flex-direction: row;
@@ -464,6 +476,26 @@ body {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+}
+
+.form__container--error .form-error {
+  display: block;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 5px;
 }
 
 footer {
