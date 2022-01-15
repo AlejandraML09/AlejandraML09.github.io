@@ -6,7 +6,7 @@ const regExpValidar = [
     /^[a-zA-Z]+$/, // regexp nombre
     /^[0-9]+$/, // regexp precio
     /^[0-9]+$/, // regexp stock
-    /^.+$/, // regexp marca
+    /^[a-zA-Z]+$/, // regexp marca
     /^.+$/, // regexp categoría
     /.*/  // regexp detalles
 ]
@@ -96,15 +96,16 @@ function renderProds(productos) {
 // Crea un objeto con los datos que ingreso el usuario en los inputs
 // Este objeto tiene datos como un nombre, precio, stock, categoria, etc y representa a un PRODUCTO
 function leerProductoIngresado() {
+    var categoria = document.getElementById("category")
     return {
         nombre: inputs[0].value,
         precio: inputs[1].value,
         stock: inputs[2].value,
         marca: inputs[3].value,
-        categoria: inputs[4].value,
-        foto: inputs[5].value,
-        detalles: inputs[6].value,
-        envio: inputs[7].checked,
+        categoria: categoria.value || "Default",
+        foto: inputs[4].value,
+        detalles: inputs[5].value,
+        envio: inputs[6].checked,
     }
 }
 

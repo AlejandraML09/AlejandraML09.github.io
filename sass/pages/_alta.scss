@@ -30,8 +30,8 @@
         padding: 0.5em;
 
         .form-error {
-            background-color: hsl(0, 100%, 90%);
-            color: hsl(0, 100%, 30%);
+            background-color: $highlight-color-hover;
+            color: $light-text-color;
             font-weight: bold;
             padding: 0.25em 0.5em;
             border-bottom-left-radius: 0.2em;
@@ -57,21 +57,6 @@
         label {
             padding-bottom: 0.5em;
         }
-        button {
-            background-color: $highlight-color;
-            border: none;
-            padding: 1em;
-            color: $light-text-color;
-            font-family: inherit;
-            font-size: inherit;
-            border-radius: 0.3em;
-            &:hover {
-                background-color: $highlight-color-hover;
-            }
-            &:disabled {
-                background-color: gray;
-            }
-        }
     }
     /* El checkbox para que aparezca como row */
     &__container-row {
@@ -92,6 +77,22 @@
         min-height: 100%;
         z-index: -1;
     }
+    button {
+        background-color: $highlight-color;
+        border: none;
+        padding: 1em;
+        color: $light-text-color;
+        font-family: inherit;
+        font-size: inherit;
+        border-radius: 0.3em;
+        margin: 0.5em;
+        &:hover {
+            background-color: $highlight-color-hover;
+        }
+        &:disabled {
+            background-color: $secondary-text-color;
+        }
+    }
 }
 
 .form__container--error {
@@ -103,15 +104,46 @@
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid $light-text-color;
     border-collapse: collapse;
 }
 
 table {
     width: 100%;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+th {
+    color: $highlight-color;
 }
 
 th,
 td {
-    padding: 5px;
+    padding: 1em;
+    button {
+        background-color: $highlight-color;
+        border: none;
+        padding: 0.7em;
+        color: $light-text-color;
+        font-family: inherit;
+        font-size: inherit;
+        border-radius: 0.3em;
+    }
+}
+
+.available-products {
+    border-top: 2px solid $light-text-color;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: rgba($color: $background-color, $alpha: 0.8);
+
+    h2 {
+        margin: 1em;
+    }
 }

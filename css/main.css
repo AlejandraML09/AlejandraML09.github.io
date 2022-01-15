@@ -420,8 +420,8 @@ body {
   padding: 0.5em;
 }
 .form__container .form-error {
-  background-color: #ffcccc;
-  color: #990000;
+  background-color: #98bee4;
+  color: #fefefe;
   font-weight: bold;
   padding: 0.25em 0.5em;
   border-bottom-left-radius: 0.2em;
@@ -446,21 +446,6 @@ body {
 .form__container label {
   padding-bottom: 0.5em;
 }
-.form__container button {
-  background-color: #007dfc;
-  border: none;
-  padding: 1em;
-  color: #fefefe;
-  font-family: inherit;
-  font-size: inherit;
-  border-radius: 0.3em;
-}
-.form__container button:hover {
-  background-color: #218efc;
-}
-.form__container button:disabled {
-  background-color: gray;
-}
 .form__container-row {
   display: flex;
   flex-direction: row;
@@ -477,6 +462,22 @@ body {
   min-height: 100%;
   z-index: -1;
 }
+.form button {
+  background-color: #007dfc;
+  border: none;
+  padding: 1em;
+  color: #fefefe;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.3em;
+  margin: 0.5em;
+}
+.form button:hover {
+  background-color: #98bee4;
+}
+.form button:disabled {
+  background-color: #999;
+}
 
 .form__container--error .form-error {
   display: block;
@@ -485,17 +486,43 @@ body {
 table,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid #fefefe;
   border-collapse: collapse;
 }
 
 table {
   width: 100%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+th {
+  color: #007dfc;
 }
 
 th,
 td {
-  padding: 5px;
+  padding: 1em;
+}
+th button,
+td button {
+  background-color: #007dfc;
+  border: none;
+  padding: 0.7em;
+  color: #fefefe;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.3em;
+}
+
+.available-products {
+  border-top: 2px solid #fefefe;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgba(18, 18, 18, 0.8);
+}
+.available-products h2 {
+  margin: 1em;
 }
 
 footer {
@@ -653,7 +680,7 @@ footer a {
   border-radius: 0.3em;
 }
 .contact-form__container button:hover {
-  background-color: #218efc;
+  background-color: #98bee4;
 }
 
 /* Un ID separado para dejar 2 inputs en la misma línea siendo uno más chico que el otro */
@@ -747,13 +774,13 @@ footer a {
   font-size: 1.4em;
 }
 .about-us__content-right li:hover {
-  color: #218efc;
+  color: #98bee4;
 }
 .about-us__content-right .fas {
   margin-right: 0.5em;
 }
 .about-us__content-right .fas:hover {
-  color: #218efc;
+  color: #98bee4;
 }
 .about-us__find-us {
   margin-bottom: 3em;
