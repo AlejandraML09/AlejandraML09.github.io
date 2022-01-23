@@ -14,7 +14,7 @@ async function renderCarrito(carrito) {
     // que se le pasaron a la plantilla
     // Modificación 18/01/2022 - Acá usamos la class cards-container del HTML - No sé si no va la clase "card-category-container"
     document.querySelector(".section-carrito").innerHTML = html
-        
+
 }
 
 function initCarrito() {
@@ -25,12 +25,22 @@ function initCarrito() {
         mostrarCarrito = !mostrarCarrito
         if (mostrarCarrito) {
             await renderCarrito(carritoModel.obtener())
-            elemSectionCarrito.classList.add("section-carrito--visible")
+            openNav()
         }
         else {
-            elemSectionCarrito.classList.remove("section-carrito--visible")
+            closeNav()
         }
     })
+}
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
 }
 
 initCarrito()

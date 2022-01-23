@@ -22,7 +22,7 @@
             <h1 class="form-title">Alta de Productos</h1>
             <form action="#" autocomplete="off" class="form">
                 <div class="form__container">
-                    <label for="name">Nombre:*</label>
+                    <label for="name">Nombre del Producto:*</label>
                     <input
                         type="text"
                         id="name"
@@ -63,30 +63,18 @@
 
                 <div class="form__container" id="#id-container">
                     <label for="category">Categoría:</label>
-                    <select id="category" name="category" size="5">
-                        <optgroup label="Teclados">
-                            <option value="k_mech">Mecánicos</option>
-                            <option value="k_bluetooth">Bluetooth</option>
-                            <option value="k_office">De oficina</option>
-                            <option value="k_gamer">Gamer</option>
-                        </optgroup>
-                        <optgroup label="Headsets">
-                            <option value="h_bluetooth">Bluetooth</option>
-                            <option value="h_usb">USB 3.0</option>
-                            <option value="h_3-5">3.5mm</option>
-                            <option value="h_7-1">7.1</option>
-                        </optgroup>
-                        <optgroup label="Microfonos">
-                            <option value="m_stand">De Pie</option>
-                            <option value="m_filter">Filtros</option>
-                            <option value="m_bluetooth">Bluetooth</option>
+                    <select id="category" name="category" size="4">
+                        <optgroup label="Elegí Categoría:">
+                            <option value="teclados">Teclado</option>
+                            <option value="headsets">Headsets</option>
+                            <option value="microfono">Microfono</option>
                         </optgroup>
                     </select>
                 </div>
 
                 <div class="form__container">
                     <label for="photo">Foto del Producto:*</label>
-                    <input type="file" id="photo" name="photo" required />
+                    <input type="text" id="photo" name="photo" required />
                     <div class="form-error"></div>
                 </div>
 

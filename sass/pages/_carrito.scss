@@ -1,48 +1,99 @@
 .section-carrito {
-    padding: 5px;
     user-select: none;
     overflow-y: auto;
-    display: none;
     position: fixed;
-    background-color: white;
+    background-color: $nav-bar-color;
     z-index: 1;
     top: 150px;
     left: 150px;
     right: 150px;
     bottom: 150px;
-    box-shadow: 0.3em 0.3em 10em 0.3em rgba(0, 0, 0, 1);
+    box-shadow: 0px 25px 40px #1687d933;
+    display: flex;
+    flex-direction: column;
 
-    &--visible {
-        display: block;
-    }
-    table,
-    th,
-    td {
-        border: 1px solid $light-text-color;
-        border-collapse: collapse;
-    }
-
-    table {
+    .cart-item {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        margin-right: 2em;
-        margin-bottom: 2em;
-    }
+        margin-bottom: 0.5em;
+        padding-right: 0.5em;
 
-    th {
-        color: $highlight-color;
-    }
+        &-description {
+            padding: 1em;
 
-    th,
-    td {
-        padding: 1em;
-        button {
-            background-color: $highlight-color;
-            border: none;
-            padding: 0.7em;
-            color: $light-text-color;
-            font-family: inherit;
-            font-size: inherit;
-            border-radius: 0.3em;
+            button {
+                outline: none;
+                background: transparent;
+                border: 1px solid transparent;
+            }
         }
+
+        .cart-image-container {
+            width: 33%;
+            background-color: $light-text-color;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+
+            &__image {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.fa-trash-alt {
+    color: $highlight-color;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.btn__enviarCarrito {
+    background-color: $highlight-color;
+    border: none;
+    padding: 1em;
+    color: $light-text-color;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 0.3em;
+    margin: 0.5em;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $nav-bar-color;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: $nav-bar-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left 0.5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
     }
 }

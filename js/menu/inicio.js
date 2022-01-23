@@ -44,12 +44,50 @@ function renderCards(productos) {
         .then(plantilla => {
             // compile the template
             var template = Handlebars.compile(plantilla);
-            // Le pasa a la plantilla los productos que tiene que mostrar
-            let html = template({ productos: productos });
-            // Pone en el elemento con clase "listado-productos" a los elementos estos generados en base a la plantilla y los productos
-            // que se le pasaron a la plantilla
-            // Modificación 18/01/2022 - Acá usamos la class cards-container del HTML - No sé si no va la clase "card-category-container"
-            document.querySelector('.cards-container').innerHTML = html
+
+            let keyboardsContainer = document.getElementById("keyboard-container")
+            let headsetsContainer = document.getElementById("headsets__container")
+            let microphonesContainer = document.getElementById("microphones__container")
+
+            // let teclados = []
+            // let microfonos = []
+            // let headsets = []
+
+
+            // for (productoCategoria of productos) {
+            //     if (productoCategoria.categoria == "teclados") {
+            //         teclados.push(productoCategoria)
+            //     }
+            //     else if (productoCategoria.categoria == "microfono") {
+            //         microfonos.push(productoCategoria)
+            //     }
+            //     else {
+            //         headsets.push(productoCategoria)
+            //     }
+            // }
+
+        // Le pasa a la plantilla los productos que tiene que mostrar
+            let tecladoHtml = template({
+                productos: productos.filter((elem) => {
+                return elem.categoria == "teclados"
+                
+
+                })
+            });
+            
+            let microfonosHtml = template({
+                productos: productos.filter((elem) => {
+                    return elem.categoria == "microfono"
+            }) })
+            
+            let headsetsHtml = template({
+                productos: productos.filter((elem) => {
+                    return elem.categoria == "headsets"
+            })});
+
+            keyboardsContainer.innerHTML = tecladoHtml;
+            headsetsContainer.innerHTML = headsetsHtml;
+            microphonesContainer.innerHTML = microfonosHtml;
         })
 }
 

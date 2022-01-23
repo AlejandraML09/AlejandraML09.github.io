@@ -899,26 +899,102 @@ footer a {
 }
 
 .section-carrito {
-  padding: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   overflow-y: auto;
-  display: none;
   position: fixed;
-  background-color: white;
+  background-color: #2a2a2a;
   z-index: 1;
   top: 150px;
   left: 150px;
   right: 150px;
   bottom: 150px;
-  box-shadow: 0.3em 0.3em 10em 0.3em black;
+  box-shadow: 0px 25px 40px #1687d933;
+  display: flex;
+  flex-direction: column;
 }
-.section-carrito--visible {
-  display: block;
+.section-carrito .cart-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding-right: 0.5em;
+}
+.section-carrito .cart-item-description {
+  padding: 1em;
+}
+.section-carrito .cart-item-description button {
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.section-carrito .cart-item .cart-image-container {
+  width: 33%;
+  background-color: #fefefe;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+.section-carrito .cart-item .cart-image-container__image {
+  max-width: 100%;
 }
 
+.fa-trash-alt {
+  color: #007dfc;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+.btn__enviarCarrito {
+  background-color: #007dfc;
+  border: none;
+  padding: 1em;
+  color: #fefefe;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.3em;
+  margin: 0.5em;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2a2a2a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+}
 .hero-banner {
   width: 100%;
   background-image: url("../imagenes/discounts.png");
