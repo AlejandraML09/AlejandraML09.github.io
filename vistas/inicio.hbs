@@ -1,0 +1,34 @@
+{{#if productos.length}}
+{{#each productos}}
+<a href="#" class="card" onclick="agregarAlCarrito({{id}})">
+    <article class="card__article">
+        <div class="card__flip">
+            <div class="card__image-container">
+                <img
+                    src="{{foto}}"
+                    alt="Foto de {{nombre}}"
+                    class="card__image"
+                />
+            </div>
+            <div class="card__content">
+                <div class="card__heading">
+                    <h2>
+                        {{nombre}}
+                    </h2>
+                    <h3>{{precio}}</h3>
+                </div>
+                <div class="card__description">
+                    <p>
+                        {{detalles}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+</a>
+{{/each}}
+{{else}}
+    <h2>No se encontraron productos.</h2>
+{{/if}}
+
+{{!-- Esto es un ciclo iterativo en la lista, en dónde por cada uno pongo una card. Nosotros por cada producto tenemos el Nombre, los Detalles y la Foto (en Alta en el cuadrado. Le podemos agregar los que queramos) --}}

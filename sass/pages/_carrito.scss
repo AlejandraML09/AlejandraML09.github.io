@@ -1,0 +1,48 @@
+.section-carrito {
+    padding: 5px;
+    user-select: none;
+    overflow-y: auto;
+    display: none;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    bottom: 150px;
+    box-shadow: 0.3em 0.3em 10em 0.3em rgba(0, 0, 0, 1);
+
+    &--visible {
+        display: block;
+    }
+    table,
+    th,
+    td {
+        border: 1px solid $light-text-color;
+        border-collapse: collapse;
+    }
+
+    table {
+        width: 100%;
+        margin-right: 2em;
+        margin-bottom: 2em;
+    }
+
+    th {
+        color: $highlight-color;
+    }
+
+    th,
+    td {
+        padding: 1em;
+        button {
+            background-color: $highlight-color;
+            border: none;
+            padding: 0.7em;
+            color: $light-text-color;
+            font-family: inherit;
+            font-size: inherit;
+            border-radius: 0.3em;
+        }
+    }
+}

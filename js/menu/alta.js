@@ -131,7 +131,6 @@ function limpiarFormulario() {
 // Inicializacion de Alta
 async function initAlta() {
     console.warn('initAlta')
-
     // Buscamos los inputs
     inputs = document.querySelectorAll('.form input')
     //console.log(inputs)
@@ -141,12 +140,11 @@ async function initAlta() {
     button = document.querySelector('button')
     // Deshabilitamos el boton
     button.disabled = true
-
     // Obtemenmos los productos
-    productosModel.productos = await productosController.obtenerProductos() // []
+    // Modificación 18/01/2022 - Le ponemos la función inicializar que se encuentra en products.js en Modelos.
+    productosModel.inicializar(await productosController.obtenerProductos()) // []
     // Mostramos los productos en pantalla
     renderProds(productosModel.obtener())
-
     // Nota: este es un for inteligente que ademas te da el indice del item en el que estas actualmente. Por eso este forEach tiene '(input, index) =>' en vez de solo 'input =>'
     // Para cada uno de los inputs hacemos lo siguiente:    
     inputs.forEach((input, index) => {
