@@ -3,7 +3,7 @@ let form = null
 let button = null
 
 const regExpValidar = [
-    /^[a-zA-Z\s]*$/, // regexp nombre
+    /^[a-zA-Z0-9\s]*$/, // regexp nombre
     /^[0-9]+$/, // regexp precio
     /^[0-9]+$/, // regexp stock
     /^[a-zA-Z]+$/, // regexp marca
