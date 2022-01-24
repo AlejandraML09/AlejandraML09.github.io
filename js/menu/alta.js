@@ -106,6 +106,7 @@ function leerProductoIngresado() {
         foto: inputs[4].value,
         detalles: inputs[5].value,
         envio: inputs[6].checked,
+        
     }
 }
 
@@ -174,3 +175,15 @@ async function initAlta() {
         await productosController.guardarProducto(producto)
     })
 }
+
+// Formulario de Abajo para que aparezca y desaparezca:
+
+function menuProductos() {
+    var menu = document.getElementsByClassName("listado-productos")[0];
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+
