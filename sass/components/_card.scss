@@ -23,10 +23,9 @@
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
     }
     /* Do an horizontal flip when you move the mouse over the flip box container */
-    &__flip:hover &__content {
-        transform: rotateY(180deg);
-    }
-    
+    // &__flip:hover &__content {
+    //     transform: rotateY(180deg);
+    // }
     /* Position the front and back side */
     &__heading,
     &__description {
@@ -75,6 +74,9 @@
         align-items: center;
         border-radius: 5px;
     }
+    &--flipped {
+        transform: rotateY(180deg);
+    }
 }
 
 .card__image {
@@ -107,4 +109,21 @@
     outline: none;
     background: transparent;
     border: 1px solid transparent;
+}
+
+.cart-button {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+
+    .fa-cart-plus {
+        font-size: 1.5em;
+        margin-left: 0.5em;
+        color: $light-text-color;
+        animation: 2s linear 0s normal none infinite spin;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
 }

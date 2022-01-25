@@ -1,6 +1,6 @@
 {{#if productos.length}}
     {{#each productos}}
-        <a href="#" class="card" onclick="agregarAlCarrito({{id}})" id="card-{{id}}">
+        <div class="card" id="card-{{id}}">
             <article class="card__article">
                 <div class="card__flip">
                     <div class="card__content">
@@ -11,19 +11,29 @@
                             <h2>
                                 {{nombre}}
                             </h2>
-                            <button id="arrow-button" onclick="toggleCard({{id}})"><i class="fas fa-angle-double-right"></i></button>
-                            <h3>${{precio}}<i class="fas fa-cart-plus"></i></h3>
-                            
+                            <button
+                                id="arrow-button"
+                                onclick="toggleCard({{id}})"
+                            ><i class="fas fa-angle-double-right"></i></button>
+                            <h3>${{precio}}<button
+                                    class="cart-button"
+                                    onclick="agregarAlCarrito({{id}})"
+                                ><i
+                                        class="fas fa-cart-plus animated faa-fast"
+                                    ></i></button></h3>
+
                         </div>
+
                         <div class="card__description">
                             <p>
                                 {{detalles}}
                             </p>
                         </div>
+
                     </div>
                 </div>
             </article>
-        </a>
+        </div>
     {{/each}}
 {{else}}
     <h2>No se encontraron productos.</h2>

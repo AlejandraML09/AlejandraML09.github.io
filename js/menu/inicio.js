@@ -34,8 +34,6 @@ function renderCards(productos) {
             let tecladoHtml = template({
                 productos: productos.filter((elem) => {
                     return elem.categoria == "teclados"
-
-
                 })
             });
 
@@ -71,18 +69,23 @@ async function initInicio() {
     productosModel.inicializar(await productosController.obtenerProductos()) // []
     let productos = productosModel.obtener()
     // Mostramos los productos en pantalla
-    renderCards(productos) 
+    renderCards(productos)
     let lg = productos.length
     // Mostramos la cantidad de productos -> Usamos operador ternario para que si NO hay nada en productos.length (o sea no hay productos), que no muestre el mensaje.
     document.querySelector(".card-category-container h1").innerHTML = lg ? `Se encontraron ${lg} productos` : ""
 }
 
-
+// Para que se de vuelta la card
 function toggleCard(cardId) {
     let card = document.getElementById("card-" + cardId)
-    card.classList.toggle("card--flipped")
+    let cardContent = card.getElementsByClassName("card__content")[0];
+    cardContent.classList.toggle("card--flipped");
     
+
+
 }
+
+
 
 function banners() {
     const id = 'headsets__container';

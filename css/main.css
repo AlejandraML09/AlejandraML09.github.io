@@ -258,9 +258,6 @@ Es para los cambios según RESOLUCIÓN.
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
-.card__flip:hover .card__content {
-  transform: rotateY(180deg);
-}
 .card__heading, .card__description {
   position: absolute;
   width: 100%;
@@ -305,6 +302,9 @@ Es para los cambios según RESOLUCIÓN.
   align-items: center;
   border-radius: 5px;
 }
+.card--flipped {
+  transform: rotateY(180deg);
+}
 
 .card__image {
   display: none;
@@ -334,6 +334,22 @@ Es para los cambios según RESOLUCIÓN.
   outline: none;
   background: transparent;
   border: 1px solid transparent;
+}
+
+.cart-button {
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.cart-button .fa-cart-plus {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  color: #fefefe;
+  -webkit-animation: 2s linear 0s normal none infinite spin;
+          animation: 2s linear 0s normal none infinite spin;
+}
+.cart-button .fa-cart-plus:hover {
+  transform: scale(1.3);
 }
 
 .section-cards {
