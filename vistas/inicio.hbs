@@ -1,29 +1,32 @@
 {{#if productos.length}}
-{{#each productos}}
-<a href="#" class="card" onclick="agregarAlCarrito({{id}})">
-    <article class="card__article">
-        <div class="card__flip">
-        <div class="card__content">
-                <div class="card__heading" style="background-image:url('{{foto}}')">
-                    <h2>
-                        {{nombre}}
-                    </h2>
-                    <h3>${{precio}}</h3>
+    {{#each productos}}
+        <a href="#" class="card" onclick="agregarAlCarrito({{id}})" id="card-{{id}}">
+            <article class="card__article">
+                <div class="card__flip">
+                    <div class="card__content">
+                        <div
+                            class="card__heading"
+                            style="background-image:url('{{foto}}')"
+                        >
+                            <h2>
+                                {{nombre}}
+                            </h2>
+                            <button id="arrow-button" onclick="toggleCard({{id}})"><i class="fas fa-angle-double-right"></i></button>
+                            <h3>${{precio}}<i class="fas fa-cart-plus"></i></h3>
+                            
+                        </div>
+                        <div class="card__description">
+                            <p>
+                                {{detalles}}
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card__description">
-                    <p>
-                        {{detalles}}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </article>
-</a>
-{{/each}}
+            </article>
+        </a>
+    {{/each}}
 {{else}}
     <h2>No se encontraron productos.</h2>
 {{/if}}
 
-
-
-{{!-- Esto es un ciclo iterativo en la lista, en dónde por cada uno pongo una card. Nosotros por cada producto tenemos el Nombre, los Detalles y la Foto (en Alta en el cuadrado. Le podemos agregar los que queramos) --}}
+{{! Esto es un ciclo iterativo en la lista, en dónde por cada uno pongo una card. Nosotros por cada producto tenemos el Nombre, los Detalles y la Foto (en Alta en el cuadrado. Le podemos agregar los que queramos) }}

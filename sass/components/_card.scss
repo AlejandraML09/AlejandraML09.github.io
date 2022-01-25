@@ -26,6 +26,7 @@
     &__flip:hover &__content {
         transform: rotateY(180deg);
     }
+    
     /* Position the front and back side */
     &__heading,
     &__description {
@@ -88,4 +89,22 @@
         margin-top: 0.5em;
         font-size: 2em;
     }
+}
+
+.fa-angle-double-right {
+    font-size: 3em;
+    display: flex;
+    align-self: flex-end;
+    justify-items: center;
+    color: $highlight-color;
+    margin-right: 3px;
+}
+
+#arrow-button {
+    display: flex;
+    align-self: flex-end;
+    justify-items: center;
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
 }

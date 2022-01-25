@@ -318,6 +318,24 @@ Es para los cambios según RESOLUCIÓN.
   font-size: 2em;
 }
 
+.fa-angle-double-right {
+  font-size: 3em;
+  display: flex;
+  align-self: flex-end;
+  justify-items: center;
+  color: #007dfc;
+  margin-right: 3px;
+}
+
+#arrow-button {
+  display: flex;
+  align-self: flex-end;
+  justify-items: center;
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
 .section-cards {
   padding: 1em;
 }
