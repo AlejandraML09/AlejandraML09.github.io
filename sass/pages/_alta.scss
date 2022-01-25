@@ -143,15 +143,33 @@
         rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
     button {
-        background-color: $highlight-color;
-        border: none;
-        padding: 0.7em;
-        color: $light-text-color;
-        font-family: inherit;
-        font-size: inherit;
-        border-radius: 0.3em;
-        margin-bottom: 0.5em;
-        margin-right: 0.5em;
+        outline: none;
+        background: transparent;
+        border: 1px solid transparent;
+    }
+    .fa-edit {
+        font-size: 1.5em;
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.3);
+            color: $highlight-color-hover;
+        }
+    }
+    .fa-trash {
+        font-size: 1.5em;
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.3);
+            color: $highlight-color-hover;
+        }
+    }
+    .fa-check-circle {
+        font-size: 1.5em;
+    }
+    .fa-times-circle {
+       font-size: 1.5em; 
     }
 }
 

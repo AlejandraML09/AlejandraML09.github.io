@@ -27,14 +27,14 @@
                 </div>
                 <div class="col col-1" data-label="Envío:">
                     {{#if envio}}
-                        <div>Si</div>
+                        <div><i class="far fa-check-circle"></i></div>
                     {{else}}
-                        <div>No</div>
+                        <div><i class="far fa-times-circle"></i></div>
                     {{/if}}
                 </div>
                 <div class="col col-1" data-label="Acción:">
-                    <button onclick="productosController.actualizarProducto({{id}})">Actualizar</button>
-                    <button onclick="productosController.borrarProducto({{id}})">Borrar</button>
+                    <button onclick="productosController.actualizarProducto({{id}})"><i class="fas fa-edit"></i></button>
+                    <button onclick="productosController.borrarProducto({{id}})"><i class="fas fa-trash"></i></button>
                 </div>
             </li>
             {{/each}}
