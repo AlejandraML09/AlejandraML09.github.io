@@ -100,11 +100,25 @@
     justify-items: center;
     color: $highlight-color;
     margin-right: 3px;
+
+    &:hover {
+        transition: all .2s ease-in-out;
+        transform: scale(1.3);
+    }
 }
 
-#arrow-button {
+#arrow-button-right {
     display: flex;
     align-self: flex-end;
+    justify-items: center;
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+#arrow-button-left {
+    display: flex;
+    align-self: center;
     justify-items: center;
     outline: none;
     background: transparent;
@@ -120,9 +134,9 @@
         font-size: 1.5em;
         margin-left: 0.5em;
         color: $light-text-color;
-        animation: 2s linear 0s normal none infinite spin;
 
         &:hover {
+            transition: all .2s ease-in-out;
             transform: scale(1.3);
         }
     }

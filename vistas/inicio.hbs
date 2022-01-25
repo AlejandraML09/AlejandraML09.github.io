@@ -12,7 +12,7 @@
                                 {{nombre}}
                             </h2>
                             <button
-                                id="arrow-button"
+                                id="arrow-button-right"
                                 onclick="toggleCard({{id}})"
                             ><i class="fas fa-angle-double-right"></i></button>
                             <h3>${{precio}}<button
@@ -28,6 +28,14 @@
                             <p>
                                 {{detalles}}
                             </p>
+                            <button id="arrow-button-left"
+                                
+                                onclick="toggleCard({{id}})"
+                            >
+                                <i
+                                    class="fas fa-angle-double-right"
+                                ></i></button>
+
                         </div>
 
                     </div>
