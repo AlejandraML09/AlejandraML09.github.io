@@ -20,10 +20,10 @@ class CarritoController {
         }
         // Guardar es el método que se encuentra en el modelo carrito.js
         carritoModel.guardar(producto);
-        this.updateBadge(); 
+        this.updateBadge();
         // Cada vez que agreguemos un producto lo vamos a persistir ahí.
         localStorage.setItem("carrito", JSON.stringify(carritoModel.obtener()));
-        
+
     }
     async borrarProducto(id) {
         console.log("borrarProducto", id);
@@ -33,7 +33,7 @@ class CarritoController {
         //Una vez que borramos el carrito y llamamos al localStorage, lo llamo acá y obtengo el carrito y se refresca de nuevo lo que se ve.
         this.updateBadge();
         await renderCarrito(carritoModel.obtener());
-        
+
     }
     // La idea es crear un servicio para que mande todo a la nube. El controlador carrito debe usar un servicio que basicamente lo envie
     async enviarCarrito() {
@@ -45,12 +45,14 @@ class CarritoController {
         //Borrando el carrito del modelo y del local storage porque ya se envió
         carritoModel.inicializar([]);
         localStorage.setItem("carrito", carritoModel.obtener());
-
         // ------ cierro la ventana del menú del carrito un tiempo después ------
         setTimeout(() => {
             elemSectionCarrito.classList.remove("section-carrito--visible");
             mostrarCarrito = false;
+            this.updateBadge();
         }, 1500);
+
+
     }
 
     getProductsAmount() {

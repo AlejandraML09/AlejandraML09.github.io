@@ -372,17 +372,6 @@ Es para los cambios según RESOLUCIÓN.
   padding: 0.5em;
 }
 
-.card__heading h3 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #007dfc;
-  width: 100%;
-  padding: 0.5em;
-  color: #fefefe;
-  margin-bottom: 1em;
-}
-
 .card__description {
   padding: 1em;
   background-color: #2a2a2a;
@@ -423,19 +412,30 @@ Es para los cambios según RESOLUCIÓN.
   outline: none;
   background: transparent;
   border: 1px solid transparent;
-}
-
-.cart-button .fa-cart-plus {
-  font-size: 1.5em;
-  margin-left: 0.5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #007dfc;
+  width: 100%;
+  padding: 8px;
   color: #fefefe;
+  margin-bottom: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
 }
 
-.cart-button .fa-cart-plus:hover {
+.cart-button:hover {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
+  cursor: pointer;
+}
+
+.cart-button .fa-cart-plus {
+  font-size: 1.1em;
+  margin-left: 0.5em;
+  color: #fefefe;
 }
 
 .fa-angle-double-right {

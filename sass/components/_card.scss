@@ -53,14 +53,14 @@
         h2 {
             padding: 0.5em;
         }
-        h3 {
-            align-self: center;
-            background-color: $highlight-color;
-            width: 100%;
-            padding: 0.5em;
-            color: $light-text-color;
-            margin-bottom: 1em;
-        }
+        // h3 {
+        //     align-self: center;
+        //     background-color: $highlight-color;
+        //     width: 100%;
+        //     padding: 0.5em;
+        //     color: $light-text-color;
+        //     margin-bottom: 1em;
+        // }
     }
     /* Style the back side */
     &__description {
@@ -98,16 +98,25 @@
     outline: none;
     background: transparent;
     border: 1px solid transparent;
+    align-self: center;
+    background-color: $highlight-color;
+    width: 100%;
+    padding: 8px;
+    color: $light-text-color;
+    margin-bottom: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.3);
+        cursor:pointer;
+    }
 
     .fa-cart-plus {
-        font-size: 1.5em;
+        font-size: 1.1em;
         margin-left: 0.5em;
         color: $light-text-color;
-
-        &:hover {
-            transition: all 0.2s ease-in-out;
-            transform: scale(1.3);
-        }
     }
 }
 
