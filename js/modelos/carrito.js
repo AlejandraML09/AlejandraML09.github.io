@@ -36,6 +36,10 @@ class CarritoModel {
         let index = this.carrito.findIndex(prod => prod.id == id)
         this.carrito.splice(index, 1)
     }
+
+    getProductsAmount() {
+        return this.carrito.length
+    }
 }
 
 const carritoModel = new CarritoModel()

@@ -78,7 +78,7 @@
     font-size: 20px;
     cursor: pointer;
     background-color: $nav-bar-color;
-    color: white;
+    color: $light-text-color;
     padding: 10px 15px;
     border: none;
 }
@@ -89,6 +89,18 @@
 
 #main {
     transition: margin-left 0.5s;
+}
+
+.notification .badge {
+    position: absolute;
+    bottom: -3px;
+    right: 0.7em;
+    transform: scale(0.6);
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: $alert-color;
+    color: $light-text-color;;
+    font-weight: bold;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

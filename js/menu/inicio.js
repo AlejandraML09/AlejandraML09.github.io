@@ -73,6 +73,7 @@ async function initInicio() {
     let lg = productos.length
     // Mostramos la cantidad de productos -> Usamos operador ternario para que si NO hay nada en productos.length (o sea no hay productos), que no muestre el mensaje.
     document.querySelector(".card-category-container h1").innerHTML = lg ? `Se encontraron ${lg} productos` : ""
+    
 }
 
 // Para que se de vuelta la card
@@ -89,3 +90,7 @@ function scrollToElement(id) {
     const element = document.getElementById(id);
     element.scrollIntoView()
 }
+
+
+// Updatea el carrito
+carritoController.updateBadge();
