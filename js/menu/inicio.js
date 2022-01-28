@@ -80,18 +80,12 @@ function toggleCard(cardId) {
     let card = document.getElementById("card-" + cardId)
     let cardContent = card.getElementsByClassName("card__content")[0];
     cardContent.classList.toggle("card--flipped");
-    
-
 
 }
 
+// Scrollea a los Banners
 
-
-function banners() {
-    const id = 'headsets__container';
-    const yOffset = -10;
+function scrollToElement(id) {
     const element = document.getElementById(id);
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    document.getElementsByTagName("main")[0].scrollTo({ top: y, behavior: 'smooth' });
+    element.scrollIntoView()
 }

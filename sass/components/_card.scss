@@ -93,6 +93,25 @@
     }
 }
 
+// El carrito dentro de la card
+.cart-button {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+
+    .fa-cart-plus {
+        font-size: 1.5em;
+        margin-left: 0.5em;
+        color: $light-text-color;
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.3);
+        }
+    }
+}
+
+// Las flechas para dar vuelta la card
 .fa-angle-double-right {
     font-size: 3em;
     display: flex;
@@ -102,8 +121,9 @@
     margin-right: 3px;
 
     &:hover {
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         transform: scale(1.3);
+        color: $highlight-color-hover;
     }
 }
 
@@ -123,21 +143,4 @@
     outline: none;
     background: transparent;
     border: 1px solid transparent;
-}
-
-.cart-button {
-    outline: none;
-    background: transparent;
-    border: 1px solid transparent;
-
-    .fa-cart-plus {
-        font-size: 1.5em;
-        margin-left: 0.5em;
-        color: $light-text-color;
-
-        &:hover {
-            transition: all .2s ease-in-out;
-            transform: scale(1.3);
-        }
-    }
 }

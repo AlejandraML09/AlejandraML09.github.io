@@ -34,6 +34,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        outline: none;
+        border: 1px solid transparent;
+        font-family: "Montserrat", sans-serif;
+        
     }
     &__container:nth-of-type(2) {
         background-image: url("../imagenes/WowChakraBlackWidowV3Pro.jpg");
