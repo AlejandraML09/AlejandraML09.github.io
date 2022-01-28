@@ -99,7 +99,7 @@
     padding: 5px 10px;
     border-radius: 50%;
     background: $alert-color;
-    color: $light-text-color;;
+    color: $light-text-color;
     font-weight: bold;
 }
 
@@ -107,5 +107,16 @@
 @media screen and (max-height: 450px) {
     .sidebar {
         padding-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notification .badge {
+        position: absolute;
+        transform: scale(0.6);
+        padding: 5px 10px;
+        border-radius: 50%;
+        right: 3em;
+        bottom:-3px;
     }
 }

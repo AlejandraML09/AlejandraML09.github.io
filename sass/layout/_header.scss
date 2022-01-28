@@ -109,7 +109,6 @@
         border-left: transparent;
         border-right: transparent;
         background-color: transparent;
-        
 
         &:focus {
             outline: none;
@@ -134,7 +133,6 @@
         flex-grow: 0 0 3em;
         background-color: $nav-bar-color;
         padding-right: 1.6em;
-        
     }
 }
 
@@ -190,6 +188,14 @@
 /********************************
 Es para los cambios según RESOLUCIÓN.
 *********************************/
+@media (max-width: 1066px) {
+    .search-bar__logo-container {
+        width: 40px;
+    }
+    .search-bar__form-container {
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
     .main-header {
@@ -211,12 +217,14 @@ Es para los cambios según RESOLUCIÓN.
         width: 40px;
         margin-left: 1em;
     }
+    .search-bar__form-container {
+        display: block;
+    }
 }
 
 @media (max-width: 400px) {
     .search-bar__form-search {
-        max-width:70px;
-
+        max-width: 70px;
+        display: block;
     }
 }
-
