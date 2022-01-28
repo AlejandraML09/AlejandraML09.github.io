@@ -1130,7 +1130,7 @@ footer a {
 
 .notification .badge {
   position: absolute;
-  bottom: -3px;
+  top: 20px;
   right: 0.7em;
   transform: scale(0.6);
   padding: 5px 10px;
@@ -1153,7 +1153,7 @@ footer a {
     padding: 5px 10px;
     border-radius: 50%;
     right: 3em;
-    bottom: -3px;
+    top: -3px;
   }
 }
 .hero-banner {
