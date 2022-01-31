@@ -100,7 +100,7 @@ function iniPlantillas() {
         //console.log('La url cambió')
 
         let id = location.hash.slice(1) || 'inicio'
-        
+
         cargarPlantilla(id)
     })
 }

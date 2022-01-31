@@ -106,7 +106,7 @@ function leerProductoIngresado() {
         foto: inputs[4].value,
         detalles: inputs[5].value,
         envio: inputs[6].checked,
-        
+
     }
 }
 
