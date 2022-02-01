@@ -76,7 +76,7 @@ async function initInicio() {
 
 }
 
-// Para que se de vuelta la card
+// Para que se de vuelta la card. Esta es la función que se corre cuando haces una click en una card. (inicio.hbs).
 function toggleCard(cardId) {
     let card = document.getElementById("card-" + cardId)
     let cardContent = card.getElementsByClassName("card__content")[0];
@@ -85,12 +85,11 @@ function toggleCard(cardId) {
 }
 
 // Scrollea a los Banners
-
 function scrollToElement(id) {
     const element = document.getElementById(id);
     element.scrollIntoView()
 }
 
 
-// Updatea el carrito
+// Updatea el carrito. Esto se hace para cuando la página carga por primera vez. Porque sino el updateBadge sólo se corre cuando agregamos o sacamos un producto del carrito. Por lo tanto; si no corremos esta función al menos 1 vez (cuando carga la página) podríamos tener items en el carrito y que el badge diga 0 hasta que no saquemos u agreguemos un nuevo item.
 carritoController.updateBadge();

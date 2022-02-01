@@ -33,6 +33,8 @@ function initCarrito() {
     })
 }
 
+// Estás funciones tienen que ver con la sidebar que se pone en el costado cuando le hacemos click al carrito. Sólo activa y desactiva estilos.
+
 function openNav() {
     document.getElementById("mySidebar").style.width = "400px";
     document.getElementById("main").style.marginLeft = "400px";

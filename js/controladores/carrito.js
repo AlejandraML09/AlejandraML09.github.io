@@ -20,6 +20,7 @@ class CarritoController {
         }
         // Guardar es el método que se encuentra en el modelo carrito.js
         carritoModel.guardar(producto);
+        //  Esta es una función que agregué para que cada vez que se agregan productos en el carrito; se actualicé en el badge de notificaciones roja arriba.
         this.updateBadge();
         // Cada vez que agreguemos un producto lo vamos a persistir ahí.
         localStorage.setItem("carrito", JSON.stringify(carritoModel.obtener()));
@@ -31,6 +32,7 @@ class CarritoController {
         carritoModel.borrar(id);
         localStorage.setItem("carrito", JSON.stringify(carritoModel.obtener()));
         //Una vez que borramos el carrito y llamamos al localStorage, lo llamo acá y obtengo el carrito y se refresca de nuevo lo que se ve.
+        // Esta es una función que agregué para que cada vez que se borra la cantidad de productos en el carrito; se actualicé en el badge de notificaciones roja arriba.
         this.updateBadge();
         await renderCarrito(carritoModel.obtener());
 
@@ -49,18 +51,16 @@ class CarritoController {
         setTimeout(() => {
             elemSectionCarrito.classList.remove("section-carrito--visible");
             mostrarCarrito = false;
+        // Acá utilizamos la función después del timeout para que la notificación se actualicé una vez que el carrito se manda al "backend"
             this.updateBadge();
         }, 1500);
-
-
     }
 
-    getProductsAmount() {
-        return carritoModel.getProductsAmount()
-    }
     updateBadge() {
+        // Consigo el id dónde va a ir la notificación de cuantos productos hay en el carrito.
         let badge = document.getElementById("cart-badge");
-        badge.innerHTML = this.getProductsAmount()
+        // Se pone dentro del Id en el innerhtml la cantidad de productos. La función getProductsAmount determina la cantidad de productos que hay en el carrito.
+        badge.innerHTML = carritoModel.getProductsAmount()
     }
 }
 

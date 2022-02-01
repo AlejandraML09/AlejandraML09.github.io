@@ -176,7 +176,7 @@ async function initAlta() {
     })
 }
 
-// Formulario de Abajo para que aparezca y desaparezca:
+// Los datos de Alta que aparecen debajo del formulario; función que tiene estilos para que aparezca y desaparezca cuando se da click:
 
 function menuProductos() {
     var menu = document.getElementsByClassName("listado-productos")[0];

@@ -37,6 +37,7 @@ class CarritoModel {
         this.carrito.splice(index, 1)
     }
 
+// Esto da la cantidad de productos que hay en el carrito.
     getProductsAmount() {
         return this.carrito.length
     }
