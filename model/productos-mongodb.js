@@ -30,7 +30,6 @@ const createProducto = async producto => {
 
         let productos = await ProductoModel.find({}).lean()
         let productosGuardado = productos[productos.length - 1]
-        // Retornamos el producto que incorporamos.
         return DB_Mongo.genIdKey(productosGuardado)
     }
     catch (error) {
@@ -44,8 +43,9 @@ const readProducto = async id => {
     if (!DB_Mongo.conexionOk) return {}
 
     try {
+
+        // El findOne devuelve UN sólo objeto, no un array de objetos. El filtro es _id.
         let producto = await ProductoModel.findOne({ _id: id }).lean()
-        //console.log(producto)
         return DB_Mongo.genIdKey(producto)
     }
     catch (error) {
@@ -60,7 +60,6 @@ const readProductos = async () => {
 
     try {
         let productos = await ProductoModel.find({}).lean()
-        //console.log(productos)
         return DB_Mongo.genIdKey(productos)
     }
     catch (error) {
