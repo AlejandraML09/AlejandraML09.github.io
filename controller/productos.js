@@ -1,11 +1,12 @@
 import api from "../api/productos.js"
 
 /* ------------ CONTROLADOR GET ------------- */
-const getProductos = async (req,res) => {
+const getProductos = async (req, res) => {
     let id = req.params.id
-    if(id) {
+
+    if (id) {
         let id = req.params.id
-        
+
         let producto = await api.obtenerProducto(id)
         res.json(producto)
     }
@@ -16,7 +17,7 @@ const getProductos = async (req,res) => {
 }
 
 /* ------------ CONTROLADOR POST ------------- */
-const postProducto = async (req,res) => {
+const postProducto = async (req, res) => {
     let producto = req.body
 
     let productoGuardado = await api.guardarProducto(producto)
@@ -25,16 +26,16 @@ const postProducto = async (req,res) => {
 
 
 /* ------------ CONTROLADOR PUT ------------- */
-const putProducto = async (req,res) => {
+const putProducto = async (req, res) => {
     let id = req.params.id
     let producto = req.body
 
-    let productoActualizado = await api.actualizarProducto(id,producto)
+    let productoActualizado = await api.actualizarProducto(id, producto)
     res.json(productoActualizado)
 }
 
 /* ------------ CONTROLADOR DELETE ------------- */
-const deleteProducto = async (req,res) => {
+const deleteProducto = async (req, res) => {
     let id = req.params.id
 
     let productoBorrado = await api.borrarProducto(id)

@@ -1,6 +1,6 @@
 //import model from "../model/productos-mem.js"
-// import model from "../model/productos-file.js"
-import model from "../model/productos-mongodb.js"
+//import model from "../model/productos-file.js"
+import model from '../model/productos-mongodb.js'
 
 
 const obtenerProductos = async () => {
@@ -18,8 +18,8 @@ const guardarProducto = async producto => {
     return productoGuardado
 }
 
-const actualizarProducto = async (id,producto) => {
-    let productoActualizado = await model.updateProducto(id,producto)
+const actualizarProducto = async (id, producto) => {
+    let productoActualizado = await model.updateProducto(id, producto)
     return productoActualizado
 }
 
