@@ -7,7 +7,6 @@ const productoSchema = mongoose.Schema({
     precio: Number,
     stock: Number,
     marca: String,
-    // Chequear Categoría
     categoria: String,
     foto: String,
     detalles: String,

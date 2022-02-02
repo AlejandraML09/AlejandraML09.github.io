@@ -1,7 +1,7 @@
 {{#if productos.length}}
     <ul class="responsive-table">
         <li class="table-header">
-            <div class="col col-1">ID:</div>
+            {{!-- <div class="col col-1">ID:</div> --}}
             <div class="col col-3">Nombre del Producto:</div>
             <div class="col col-1">Precio:</div>
             <div class="col col-1">Stock:</div>
@@ -15,7 +15,7 @@
 
         {{#each productos}}
             <li class="table-row">
-                <div class="col col-1" data-label="ID:">{{id}}</div>
+                {{!-- <div class="col col-1" data-label="ID:">{{id}}</div> --}}
                 <div class="col col-3" data-label="Nombre:">{{nombre}}</div>
                 <div class="col col-1" data-label="Precio:">{{precio}}</div>
                 <div class="col col-1" data-label="Stock:">{{stock}}</div>
