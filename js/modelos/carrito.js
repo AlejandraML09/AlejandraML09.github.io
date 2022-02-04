@@ -15,7 +15,7 @@ class CarritoModel {
     }
     // Si esto devuelve un valor distinto de 0 implica que existe. Es decir esto chequea si el producto existe o no dentro del carrito. Filter lo que hace es crear un array nuevo dónde los elementos del array van a ser elegidos por lo que devuelva la función callback. Lo que busco es si ese id de producto existe en los elementos del carrito o no.
     productoExiste(producto) {
-        this.carrito.filter(prod => prod.id == producto.id).length
+        return this.carrito.filter(prod => prod.id == producto.id).length
     }
 
     // Al obtener el producto (y si existía me va a devolver en que cantidad tenía)

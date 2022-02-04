@@ -12,14 +12,15 @@ class CarritoController {
     agregarAlCarrito(producto) {
         if (!carritoModel.productoExiste(producto)) {
             producto.cantidad = 1;
+            // Guardar es el método que se encuentra en el modelo carrito.js
+            carritoModel.guardar(producto);
         }
         // Si el producto existe, lo que hago es obtener ese producto del carrito y le aumento la cantidad.
         else {
             let productoDeCarrito = carritoModel.obtenerProducto(producto);
             productoDeCarrito.cantidad++;
         }
-        // Guardar es el método que se encuentra en el modelo carrito.js
-        carritoModel.guardar(producto);
+        
         //  Esta es una función que agregué para que cada vez que se agregan productos en el carrito; se actualicé en el badge de notificaciones roja arriba.
         this.updateBadge();
         // Cada vez que agreguemos un producto lo vamos a persistir ahí.
