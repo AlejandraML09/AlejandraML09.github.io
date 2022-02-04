@@ -1,5 +1,6 @@
 import express from 'express'
 import routerProductos from './router/productos.js'
+import config from "./config.js"
 
 /* ------- Conexión hacia mongoDB ----------- */
 // Esto es una conexión hacia mongoDB (esto me garantiza la conexión hacia la base de datos). Para verificar veo que en la consola me aparece el mensaje Base de datos conectada!
@@ -17,6 +18,6 @@ app.use('/api/productos', routerProductos)
 
 
 /* ------------ LISTEN DEL SERVIDOR --------------- */
-const PORT = 8080
+const PORT = config.PORT
 const server = app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto ${PORT}`))
 server.on('error', error => console.log(`Error en servidor express: ${error.message}`))
