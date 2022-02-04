@@ -1,5 +1,8 @@
 import mongoose from "mongoose"
 
+// const STR_CNX = 'mongodb://localhost/ecommerce3' Esto es el mongoDB Local.
+const STR_CNX = "mongodb+srv://Alejandra:nwJR8RrBGC2ytZE@cluster0.ghgj4.mongodb.net/ecommerce3?retryWrites=true&w=majority"
+
 class DB_Mongo {
     static conexionOk = false
 
@@ -21,7 +24,7 @@ class DB_Mongo {
         try {
             if (!DB_Mongo.conexionOk) {
                 // Para conectarme a la base de datos necesito definir un string. En la página hay todo un link con el string de conexión para mongoose. Y se hace con una promesa en general. ecommerce es la base de datos que habíamos creado antes a través de la terminal; eligiendola con use ecommerce.
-                await mongoose.connect('mongodb://localhost/ecommerce3', {
+                await mongoose.connect(STR_CNX, {
                     useNewUrlParser: true,
                     useUnifiedTopology: true
                 })
