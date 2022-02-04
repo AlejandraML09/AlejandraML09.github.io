@@ -13,7 +13,7 @@
                     <h3>{{nombre}}</h3>
                     <h4>${{precio}}</h4>
                     <p>{{marca}}</p>
-                    <p>Stock:{{cantidad}}</p>
+                    <p>Cantidad:{{cantidad}}</p>
                     {{#if envio}}
                         <p>Envío: Si</p>
                     {{else}}
@@ -22,7 +22,7 @@
                 </div>
                 <div class="cart-item-button">
                     <button
-                        onclick="carritoController.borrarProducto({{id}})"
+                        onclick="carritoController.borrarProducto('{{id}}')"
                     ><i class="far fa-trash-alt"></i></button>
                 </div>
             </div>
