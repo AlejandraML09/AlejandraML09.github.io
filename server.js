@@ -10,7 +10,7 @@ if (config.TIPO_DE_PERSISTENCIA == "MONGODB") {
     /* ------- Conexión hacia mongoDB ----------- */
     // Esto es una conexión hacia mongoDB (esto me garantiza la conexión hacia la base de datos). Para verificar veo que en la consola me aparece el mensaje Base de datos conectada!
     DB_Mongo.conectarDB()
-/* ------------------------------------------ */
+    /* ------------------------------------------ */
 }
 
 const app = express()
@@ -23,6 +23,11 @@ app.use('/api/productos', routerProductos)
 app.use('/api/productos', routerCarrito)
 
 
+/* Environment de Node.JS */
+//console.log(process.env)
+console.log('process.env.PORT:', process.env.PORT)
+console.log('process.env.TIPO_P:', process.env.TIPO_P)
+console.log('process.env.CNX:', process.env.CNX)
 
 /* ------------ LISTEN DEL SERVIDOR --------------- */
 const PORT = config.PORT
