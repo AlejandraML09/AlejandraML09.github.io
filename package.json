@@ -8,16 +8,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon server.js",
     "start": "node server.js",
-    "start-env": "PORT=5000 TIPO_P=FILE node server.js",
-    "start-dotenv": "NODE_ENV='' node server.js",
-    "dev": "NODE_ENV=development nodemon server.js",
-    "prod": "NODE_ENV=production node server.js"
-    
+    "start-env": "cross-env PORT=5000 cross-env TIPO_P=FILE node server.js",
+    "start-dotenv": "cross-env NODE_ENV='' node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "prod": "cross-env NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "DS",
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "datenv": "^0.0.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
