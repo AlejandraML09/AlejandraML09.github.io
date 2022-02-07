@@ -1,14 +1,17 @@
 import express from 'express'
 import routerProductos from './router/productos.js'
-import routerCarrito from "./router/carrito.js"
+import routerCarrito from './router/carrito.js'
 import DB_Mongo from './model/DB_Mongo.js'
-import config from "./config.js"
+
+import config from './config.js'
 
 
+// console.log(process.env.ANDROID_SDK)
+// console.log(process.env.NODE_ENV)
+// console.log(process.env.PORT)
 
-if (config.TIPO_DE_PERSISTENCIA == "MONGODB") {
+if (config.TIPO_DE_PERSISTENCIA == 'MONGODB') {
     /* ------- Conexión hacia mongoDB ----------- */
-    // Esto es una conexión hacia mongoDB (esto me garantiza la conexión hacia la base de datos). Para verificar veo que en la consola me aparece el mensaje Base de datos conectada!
     DB_Mongo.conectarDB()
     /* ------------------------------------------ */
 }
@@ -20,11 +23,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/productos', routerProductos)
-app.use('/api/productos', routerCarrito)
-
+app.use('/api/carrito', routerCarrito)
 
 /* Environment de Node.JS */
-//console.log(process.env)
 console.log('process.env.PORT:', process.env.PORT)
 console.log('process.env.TIPO_P:', process.env.TIPO_P)
 console.log('process.env.CNX:', process.env.CNX)
