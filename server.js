@@ -10,6 +10,9 @@ import config from './config.js'
 // console.log(process.env.NODE_ENV)
 // console.log(process.env.PORT)
 
+// console.log(config)
+// console.log(process.env)
+
 if (config.TIPO_DE_PERSISTENCIA == 'MONGODB') {
     /* ------- Conexión hacia mongoDB ----------- */
     DB_Mongo.conectarDB()
