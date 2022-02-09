@@ -72,10 +72,29 @@
                     </select>
                 </div>
 
-                <div class="form__container">
+                <!-- <div class="form__container">
                     <label for="photo">Foto del Producto:*</label>
                     <input type="text" id="photo" name="photo" required />
                     <div class="form-error"></div>
+                </div> -->
+
+                <div id="drop-area">
+                    <p>
+                        Subir imágen al servidor con <b>file dialog</b> ó con
+                        <b>drag and drop</b> dentro del área punteada
+                    </p>
+                    <br />
+                    <input
+                        type="file"
+                        id="foto"
+                        accept="imagen/*"
+                        onchange="handleFiles(this.files)"
+                    />
+                    <label for="foto" class="button">File dialog</label>
+                    <br /><br />
+
+                    <progress id="progress-bar" max="100" value="0"></progress>
+                    <div id="gallery"><img src="" alt="" /></div>
                 </div>
 
                 <div class="form__container">

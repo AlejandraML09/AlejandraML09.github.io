@@ -129,6 +129,13 @@ function limpiarFormulario() {
     }
 }
 
+function handleFiles(files) {
+
+}
+
+
+
+
 // Inicializacion de Alta
 async function initAlta() {
     console.warn('initAlta')
