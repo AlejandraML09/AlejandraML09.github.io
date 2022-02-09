@@ -425,7 +425,6 @@ body {
   margin: auto;
   margin-bottom: 2em;
   /* Contenedor de los Formularios */
-  /* El checkbox para que aparezca como row */
   /* Video de Fondo */
 }
 .form__container {
@@ -434,6 +433,13 @@ body {
   justify-content: center;
   align-content: center;
   padding: 0.5em;
+}
+.form__container--row {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.form__container--row input {
+  margin-left: 1.5em;
 }
 .form__container .form-error {
   background-color: #98bee4;
@@ -462,14 +468,6 @@ body {
 .form__container label {
   padding-bottom: 0.5em;
 }
-.form__container-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.form__container-row input {
-  margin-left: 1.5em;
-}
 .form__background-video {
   position: fixed;
   right: 0;
@@ -496,19 +494,22 @@ body {
 }
 
 #drop-area {
-  border: 2px dashed #ccc;
-  border-radius: 20px;
-  width: 500px;
-  margin: 25px 0;
-  padding: 20px;
+  padding: 1em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: inherit;
+  font-size: inherit;
+  color: #fefefe;
+  margin: 0 0.5em 1em 0.5em;
+  background-color: #2a2a2a;
 }
-#drop-area .button {
-  display: inline-block;
-  padding: 10px;
-  background: #ccc;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+#drop-area .drop-area--title {
+  margin-bottom: 1em;
+}
+#drop-area .drop-area__container {
+  padding: 1em;
+  border: 2.5px dashed #fefefe;
+  border-radius: 1em;
 }
 #drop-area #foto {
   display: none;
@@ -518,8 +519,18 @@ body {
   margin-top: 10px;
   vertical-align: middle;
 }
-#drop-area #drop-area.highlight {
-  border-color: purple;
+#drop-area .drop-area__container.highlight {
+  border-color: #007dfc;
+}
+
+.fa-upload {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+.fa-upload:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.3);
+  color: #98bee4;
 }
 
 .form__container--error .form-error {

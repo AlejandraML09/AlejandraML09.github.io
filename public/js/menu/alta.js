@@ -1,6 +1,9 @@
 let inputs = null
 let form = null
 let button = null
+let dropArea = null
+let progressBar = null
+let URLImagenSubida = ''
 
 const regExpValidar = [
     /^[a-zA-Z0-9\s]*$/, // regexp nombre
@@ -103,9 +106,9 @@ function leerProductoIngresado() {
         stock: inputs[2].value,
         marca: inputs[3].value,
         categoria: categoria.value || "Default",
-        foto: inputs[4].value,
-        detalles: inputs[5].value,
-        envio: inputs[6].checked,
+        foto: URLImagenSubida, // inputs[4].value,
+        detalles: inputs[4].value,
+        envio: inputs[5].checked,
 
     }
 }
@@ -113,34 +116,81 @@ function leerProductoIngresado() {
 // Borra todos los datos de los inputs
 function limpiarFormulario() {
     // inicializo los campos del formulario
-
     // Por cada uno de los inputs me fijo si es un checkbox o no
     // Si es un checkbox, le pongo que este deschequado
     // Si no es un checkbox, le pongo contenido vacio (input.value = '')
     inputs.forEach(input => {
         input.type == 'checkbox' ? input.checked = false : input.value = ''
     })
-
     // Deshabilito el boton de enviar el formulario
     button.disabled = true
     // Pongo que todos los campos son invalidos
     for (let i = 0; i < camposValidos.length; i++) {
         camposValidos[i] = false
     }
+    let img = document.querySelector('#gallery img')
+    img.src = ''
+    inicializarProgress()
+    URLImagenSubida = ''
+}
+
+/* Las funciones drag and drop y la barra de progress */
+/* ----------------- funciones de drag and drop y file dialog (upload) ---------------------- */
+function inicializarProgress() {
+    progressBar.value = 0
+}
+
+function actualizarProgress(porcentaje) {
+    progressBar.value = porcentaje      // 0 a 100
+}
+
+function previewFile(file) {
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = function () {
+        let img = document.querySelector('#gallery img')
+        img.src = reader.result
+    }
 }
 
 function handleFiles(files) {
+    //console.log(files)
+    let file = files[0]
+    inicializarProgress()
+    previewFile(file)
+    uploadFile(file)
+}
 
+function uploadFile(file) {
+    var url = '/upload'
+
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST', url)
+
+    xhr.upload.addEventListener('progress', e => {
+        let porcentaje = (e.loaded * 100) / e.total
+        actualizarProgress(porcentaje)
+    })
+
+    xhr.addEventListener('load', () => {
+        if (xhr.status == 200) {
+            let nombreImagenSubida = JSON.parse(xhr.response).nombre
+            URLImagenSubida = nombreImagenSubida ? ('/uploads/' + nombreImagenSubida) : ''
+        }
+    })
+
+    var formData = new FormData()
+    formData.append('foto', file)
+
+    xhr.send(formData)
 }
 
 
-
-
-// Inicializacion de Alta
+//*************************** Inicializacion de Alta *******/
 async function initAlta() {
     console.warn('initAlta')
     // Buscamos los inputs
-    inputs = document.querySelectorAll('.form input')
+    inputs = document.querySelectorAll('.form .form__container input')
     //console.log(inputs)
     // Buscamos el form
     form = document.querySelector('.form')
@@ -167,21 +217,50 @@ async function initAlta() {
             })
         }
     })
-
     // En el formulario agregamos un event listener de "submit" (que significa que intentaron enviar el formulario)
     form.addEventListener('submit', async e => {
         // Evitamos que haga el comportamiento default
         e.preventDefault()
-
         // Creamos un producto en base a los inputs del usuario
         let producto = leerProductoIngresado()
         // Borramos todo lo que escribio el usuario de los inputs
         limpiarFormulario()
-
         // Guardamos el producto en la lista de productos usando el contoller.
         await productosController.guardarProducto(producto)
     })
+
+    /* ------------- inicialización drag and drop ---------------- */
+    dropArea = document.getElementById('drop-area')
+    progressBar = document.getElementById('progress-bar')
+
+
+        ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, e => e.preventDefault())
+            document.body.addEventListener(eventName, e => e.preventDefault())
+        })
+
+        ;['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => {
+                dropArea.getElementsByClassName("drop-area__container")[0].classList.add('highlight')
+            })
+        })
+
+        ;['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => {
+                dropArea.getElementsByClassName("drop-area__container")[0].classList.remove('highlight')
+            })
+        })
+
+    dropArea.addEventListener('drop', e => {
+        //console.log(e)
+        var dt = e.dataTransfer
+        var files = dt.files
+        //console.log(files)
+        handleFiles(files)
+    })
+
 }
+
 
 // Los datos de Alta que aparecen debajo del formulario; función que tiene estilos para que aparezca y desaparezca cuando se da click:
 

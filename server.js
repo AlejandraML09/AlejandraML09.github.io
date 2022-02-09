@@ -2,16 +2,8 @@ import express from 'express'
 import routerProductos from './router/productos.js'
 import routerCarrito from './router/carrito.js'
 import DB_Mongo from './model/DB_Mongo.js'
-
 import config from './config.js'
-
-
-// console.log(process.env.ANDROID_SDK)
-// console.log(process.env.NODE_ENV)
-// console.log(process.env.PORT)
-
-// console.log(config)
-// console.log(process.env)
+import routerUpload from './router/upload.js'
 
 if (config.TIPO_DE_PERSISTENCIA == 'MONGODB') {
     /* ------- Conexión hacia mongoDB ----------- */
@@ -27,6 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/productos', routerProductos)
 app.use('/api/carrito', routerCarrito)
+app.use('/upload', routerUpload)
 
 /* Environment de Node.JS */
 console.log('process.env.PORT:', process.env.PORT)

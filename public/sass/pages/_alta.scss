@@ -28,6 +28,13 @@
         justify-content: center;
         align-content: center;
         padding: 0.5em;
+        &--row {
+            flex-direction: row;
+            justify-content: flex-start;
+            input {
+                margin-left: 1.5em;
+            }
+        }
         // Mensaje de Error en la validación (se activa con JS)
         .form-error {
             background-color: $highlight-color-hover;
@@ -58,16 +65,7 @@
             padding-bottom: 0.5em;
         }
     }
-    /* El checkbox para que aparezca como row */
-    &__container-row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
 
-        input {
-            margin-left: 1.5em;
-        }
-    }
     /* Video de Fondo */
     &__background-video {
         position: fixed;
@@ -96,35 +94,48 @@
 }
 
 #drop-area {
-        border : 2px dashed #ccc;
-        border-radius: 20px;
-        width: 500px;
-        margin: 25px 0;
-        padding: 20px;
-    .button {
-        display: inline-block;
-        padding: 10px;
-        background: #ccc;
-        cursor: pointer;
-        border-radius: 5px;
-        border: 1px solid #ccc;
+    padding: 1em;
+    border: 0;
+    border-radius: 0.5em;
+    font-family: inherit;
+    font-size: inherit;
+    color: $light-text-color;
+    margin: 0 0.5em 1em 0.5em;
+    background-color: $nav-bar-color;
+
+    .drop-area--title {
+        margin-bottom: 1em;
+    }
+
+    .drop-area__container {
+        padding: 1em;
+        border : 2.5px dashed $light-text-color;
+        border-radius: 1em;
+
     }
 
     #foto {
         display: none;
     }
-
     #gallery img {
         width: 100px;
         margin-top: 10px;
         vertical-align: middle;
     }
-
-    #drop-area.highlight {
-        border-color: purple;
+    .drop-area__container.highlight {
+        border-color: $highlight-color;
     }
 }
 
+.fa-upload {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.3);
+        color: $highlight-color-hover;
+    }
+}
 
 // Progress Bar
 
