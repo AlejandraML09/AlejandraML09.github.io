@@ -495,6 +495,33 @@ body {
   background-color: #999;
 }
 
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 500px;
+  margin: 25px 0;
+  padding: 20px;
+}
+#drop-area .button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#drop-area #foto {
+  display: none;
+}
+#drop-area #gallery img {
+  width: 100px;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+#drop-area #drop-area.highlight {
+  border-color: purple;
+}
+
 .form__container--error .form-error {
   display: block;
 }
