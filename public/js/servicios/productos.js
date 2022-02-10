@@ -1,5 +1,5 @@
 class ProductosService {
-    URL_PRODUCTOS = '/api/productos/' //'https://61dd84a6f60e8f0017668897.mockapi.io/productos/' //
+    URL_PRODUCTOS = 'https://connecticus-shop.glitch.me/api/productos/' //'https://61dd84a6f60e8f0017668897.mockapi.io/productos/' //
 
     async obtenerProductos() {
         let productos = await http.get(this.URL_PRODUCTOS)
