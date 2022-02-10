@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,500;1,700&display=swap");
+.loader {
+  background-color: #121212;
+}
+
 .middle {
   top: 50%;
   left: 50%;
@@ -66,7 +70,7 @@
   }
   50% {
     transform: scaleY(1);
-    background: yellowgreen;
+    background: #007dfc;
   }
   100% {
     transform: scaleY(0.1);
@@ -80,7 +84,7 @@
   }
   50% {
     transform: scaleY(1);
-    background: yellowgreen;
+    background: #007dfc;
   }
   100% {
     transform: scaleY(0.1);
